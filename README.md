@@ -21,6 +21,15 @@ Each skill is designed to be:
 | [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B teams answering security questionnaires. | Evidence-backed answer draft and escalation labels. | Fixture script covered by `quick_validate.py`. |
 | [`workslop-review`](workslop-review/SKILL.md) | Managers and ICs reviewing vague AI-assisted work output. | Rubric-based critique and accountable rewrite. | Prompt/workflow skill; no script required. |
 
+## Standalone Repositories
+
+These focused repos have their own audience-specific landing pages:
+
+- [`ap-duplicate-payment-preflight`](https://github.com/oceanfsdfsvfdsvs/ap-duplicate-payment-preflight): catch duplicate vendor payments before release.
+- [`chargeback-evidence-pack`](https://github.com/oceanfsdfsvfdsvs/chargeback-evidence-pack): assemble merchant dispute evidence packs.
+- [`flaky-ci-forensics`](https://github.com/oceanfsdfsvfdsvs/flaky-ci-forensics): turn flaky CI failures into triage reports.
+- [`feature-flag-debt-audit`](https://github.com/oceanfsdfsvfdsvs/feature-flag-debt-audit): clean stale feature flags without deleting guardrails.
+
 ## Quick Start
 
 Clone or copy this repository, then validate the local fixtures:
