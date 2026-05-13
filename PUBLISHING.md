@@ -25,14 +25,14 @@ The final `find` command should print nothing.
 git status --short
 git remote -v
 gh auth status
-gh repo create codex-high-value-skills --public --source=. --remote=origin --push
+gh repo create practical-agent-skills --public --source=. --remote=origin --push
 git ls-remote origin refs/heads/main
 ```
 
 If the repository already exists, add the remote explicitly:
 
 ```bash
-git remote add origin https://github.com/<owner>/codex-high-value-skills.git
+git remote add origin https://github.com/<owner>/practical-agent-skills.git
 git push -u origin main
 ```
 
@@ -43,7 +43,7 @@ Do not push if validation fails, secrets are found, or the target repository is 
 Suggested repository description:
 
 ```text
-Local-first high-value agent skills for Codex, Claude Code, and OpenClaw.
+Practical local-first agent skills for Codex, Claude Code, and OpenClaw.
 ```
 
 Suggested topics:

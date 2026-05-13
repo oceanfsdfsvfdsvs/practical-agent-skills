@@ -1,8 +1,8 @@
-# 高价值 Agent Skills
+# 实用 Agent Skills
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的高价值问题：财务控制、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -15,13 +15,13 @@
 
 | Skill | 适合谁 | 输出什么 | 验证状态 |
 |---|---|---|---|
-| [`ap-duplicate-payment-preflight`](ap-duplicate-payment-preflight/SKILL.md) | 财务、AP、Ops 在付款前审核付款批次。 | 重复付款风险报告，标记 hold/review 行。 | 已接入 `quick_validate.py` fixture。 |
-| [`chargeback-evidence-pack`](chargeback-evidence-pack/SKILL.md) | 商家、电商、支付运营处理拒付/争议。 | 按 reason code 组织的证据清单与挑战建议。 | 已接入 `quick_validate.py` fixture。 |
-| [`csv-import-preflight`](csv-import-preflight/SKILL.md) | Ops/CS/内部工具团队导入 CSV/TSV 前检查风险。 | Block/review/pass 导入报告和风险行。 | 已接入 `quick_validate.py` fixture。 |
-| [`feature-flag-debt-audit`](feature-flag-debt-audit/SKILL.md) | 工程/平台团队清理陈旧 feature flags。 | 清理候选、保护性 guardrails、代码引用、ticket。 | 已接入 `quick_validate.py` fixture。 |
-| [`flaky-ci-forensics`](flaky-ci-forensics/SKILL.md) | 工程团队分析不稳定 CI/测试失败。 | 失败聚类、flake 置信度、成本估算、修复计划。 | 已接入 `quick_validate.py` fixture。 |
-| [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B 团队回答安全问卷。 | 基于证据的回答草稿和升级标签。 | 已接入 `quick_validate.py` fixture。 |
-| [`workslop-review`](workslop-review/SKILL.md) | 管理者和 IC 审查含糊的 AI 辅助工作产出。 | Rubric 审查和更清晰的改写版本。 | Prompt/workflow skill，无脚本依赖。 |
+| [`重复付款预检查`](ap-duplicate-payment-preflight/SKILL.md) | 财务、AP、Ops 在付款前审核付款批次。 | 重复付款风险报告，标记 hold/review 行。 | 已接入 `quick_validate.py` fixture。 |
+| [`拒付证据包整理`](chargeback-evidence-pack/SKILL.md) | 商家、电商、支付运营处理拒付/争议。 | 按 reason code 组织的证据清单与挑战建议。 | 已接入 `quick_validate.py` fixture。 |
+| [`CSV 导入预检查`](csv-import-preflight/SKILL.md) | Ops/CS/内部工具团队导入 CSV/TSV 前检查风险。 | Block/review/pass 导入报告和风险行。 | 已接入 `quick_validate.py` fixture。 |
+| [`Feature Flag 债务审计`](feature-flag-debt-audit/SKILL.md) | 工程/平台团队清理陈旧 feature flags。 | 清理候选、保护性 guardrails、代码引用、ticket。 | 已接入 `quick_validate.py` fixture。 |
+| [`不稳定 CI 取证`](flaky-ci-forensics/SKILL.md) | 工程团队分析不稳定 CI/测试失败。 | 失败聚类、flake 置信度、成本估算、修复计划。 | 已接入 `quick_validate.py` fixture。 |
+| [`安全问卷分流`](security-questionnaire-triage/SKILL.md) | B2B 团队回答安全问卷。 | 基于证据的回答草稿和升级标签。 | 已接入 `quick_validate.py` fixture。 |
+| [`Workslop 审查`](workslop-review/SKILL.md) | 管理者和 IC 审查含糊的 AI 辅助工作产出。 | Rubric 审查和更清晰的改写版本。 | Prompt/workflow skill，无脚本依赖。 |
 
 ## 独立仓库
 
@@ -90,13 +90,13 @@ openclaw skills check <skill-name>
 
 | Skill | Codex/OpenAI | Claude Code | OpenClaw | 本地脚本 |
 |---|---|---|---|---|
-| `ap-duplicate-payment-preflight` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `chargeback-evidence-pack` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `csv-import-preflight` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `feature-flag-debt-audit` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `flaky-ci-forensics` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `security-questionnaire-triage` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
-| `workslop-review` | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 无，prompt workflow |
+| 重复付款预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 拒付证据包整理 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| CSV 导入预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| Feature Flag 债务审计 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 不稳定 CI 取证 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 安全问卷分流 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| Workslop 审查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 无，prompt workflow |
 
 ## 验证
 

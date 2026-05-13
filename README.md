@@ -1,4 +1,4 @@
-# High Value Agent Skills
+# Practical Agent Skills
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
