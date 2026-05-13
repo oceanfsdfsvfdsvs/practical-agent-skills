@@ -1,12 +1,23 @@
 # AP Duplicate Payment Preflight
 
-Local-first skill for finding duplicate-payment risk in accounts payable exports before payment release.
+Catch duplicate vendor payments before money leaves the bank.
+
+`ap-duplicate-payment-preflight` is a local-first agent skill for finance, AP, operations, and founder-led teams that review payment runs before ACH, wire, card, or check release.
+
+It helps an agent inspect exported invoices or bills, find exact and near duplicates, and produce an AP-reviewable exception report without connecting to your ERP or handling credentials.
 
 ## Problem
 
 AP teams often rely on ERP warnings that catch only exact duplicates. Real duplicate payments often appear as vendor aliases, OCR invoice-number variants, resubmitted bills, or paid-versus-pending collisions that require a repeatable review process.
 
 This skill combines AP-specific review rules with a deterministic local scanner so an agent can produce a payment-run exception report without connecting to accounting systems or handling credentials.
+
+## Why Use This Instead Of A Prompt
+
+- Normalizes invoice numbers such as `INV-1007`, `INV1007`, and `1007`.
+- Checks paid-versus-pending collisions, same PO, same amount, close dates, and vendor aliases.
+- Separates `hold_payment`, `ap_review`, and allowed-with-note cases.
+- Keeps the agent inside an operational review boundary instead of approving or cancelling payments.
 
 ## Contents
 

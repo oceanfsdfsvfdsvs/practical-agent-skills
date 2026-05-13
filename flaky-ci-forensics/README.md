@@ -1,10 +1,19 @@
 # Flaky CI Forensics
 
-`flaky-ci-forensics` helps an agent turn intermittent CI/test failures into a concrete triage decision. It combines a domain workflow, failure taxonomy, local parser, and report template so the result is more stable than asking a model to "debug this flaky test" from raw logs.
+Stop rerunning CI until somebody knows why it failed.
+
+`flaky-ci-forensics` helps engineering teams turn intermittent CI/test failures into a concrete triage decision. It combines a domain workflow, failure taxonomy, local parser, and report template so the result is more stable than asking a model to "debug this flaky test" from raw logs.
 
 ## What It Solves
 
 Teams often waste CI minutes and developer attention rerunning failures that later pass, while real regressions can also be mislabeled as flakes. This skill forces the agent to preserve evidence, classify the failure mode, estimate cost, and recommend a bounded next action.
+
+## Why Use This Instead Of A Prompt
+
+- Parses JUnit XML, CI logs, and optional history CSV locally.
+- Separates timeouts, selector sync, external-service failures, state leaks, runner issues, and true regressions.
+- Estimates wasted CI minutes/day when cost inputs exist.
+- Prevents the agent from hiding real product regressions behind "probably flaky" language.
 
 ## Included Assets
 

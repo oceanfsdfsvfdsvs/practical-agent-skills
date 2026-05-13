@@ -1,12 +1,21 @@
 # Feature Flag Debt Audit
 
-Local-first skill for finding stale feature flags and producing safe cleanup plans.
+Find stale feature flags without deleting your kill switches.
+
+`feature-flag-debt-audit` is a local-first agent skill for engineering and platform teams that need to clean up release toggles, experiments, migration gates, and operational flags without guessing from code snippets.
 
 ## Problem
 
 Teams often add release toggles, experiments, and kill switches faster than they remove them. Stale flags increase branching complexity, make tests harder to reason about, and can turn cleanup into a risky guessing exercise.
 
 This skill combines a repeatable cleanup workflow with a deterministic local scanner so an agent can separate likely delete candidates from flags that need owner review or must remain permanent.
+
+## Why Use This Instead Of A Prompt
+
+- Normalizes CSV/JSON flag exports and scans source references locally.
+- Separates `delete_candidate`, `owner_review`, `instrument_first`, and `keep_permanent`.
+- Preserves guardrails for kill switches, billing/auth/security paths, migrations, and entitlement flags.
+- Produces cleanup tickets with owner, evidence, verification, and rollback steps.
 
 ## Contents
 
