@@ -1,0 +1,5 @@
+key,name,status,kind,owner,created_at,last_seen,expires_at,permanent,description
+checkout_v2,Checkout V2,launched,release,payments,2025-08-01,2025-11-05,2026-01-15,false,Rollout complete; old checkout branch should be removed.
+kill_checkout_payments,Checkout payments kill switch,active,ops,payments,2025-01-20,2026-05-10,,true,Operational kill switch for payment processor incidents.
+old_nav_holdout,Old navigation holdout,archived,experiment,,2025-02-10,2025-07-02,2025-12-01,false,Experiment archived after decision.
+pricing_migration_guard,Pricing migration guard,active,migration,billing,2025-12-15,,2026-06-30,false,Migration gate remains until backfill audit is complete.

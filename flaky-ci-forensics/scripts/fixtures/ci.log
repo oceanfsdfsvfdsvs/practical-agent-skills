@@ -1,0 +1,9 @@
+2026-05-10T09:12:02Z runner=ubuntu-24.04 browser=chromium-124 worker=3 retry=2
+Retry #1 failed for tests.e2e.checkout::test_guest_checkout_submits_order
+Retry #2 passed for tests.e2e.checkout::test_guest_checkout_submits_order without code changes
+TimeoutError: waiting for selector [data-testid=place-order] timed out after 30000ms
+Trace artifact: checkout-trace.zip
+Error: read ECONNRESET while calling payment sandbox
+payment sandbox returned HTTP 502 during webhook delivery
+tests.unit.pricing::test_discount_rounding failed after pricing parser change
+

@@ -1,0 +1,5 @@
+Email,Email ,External ID,signup_date,zip,amount,status,notes
+alice@example.com,alice@example.com,C001,01/02/2026,02108,12.50,active,ok
+bob@example.com,bob@example.com,C002,31/04/2026,94105,free,paused,"=IMPORTXML(""http://example.com"",""//a"")"
+alice@example.com,alice@example.com,C001,13/02/2026,00123,9.99,ACTIVE,
+,missing@example.com,C004,02/29/2025,60601,10.00,inactive,

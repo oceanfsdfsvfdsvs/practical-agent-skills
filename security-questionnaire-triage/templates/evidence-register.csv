@@ -1,0 +1,4 @@
+evidence_id,title,domain,owner,last_reviewed,confidentiality,status,location,notes
+SOC2-001,SOC 2 Type II report,compliance_audit,GRC Lead,2026-04-10,confidential,approved,Trust portal,Share only under NDA
+MFA-001,MFA and access control policy,identity_access,Security Lead,2026-04-10,internal,approved,Policy repository,Production access requires MFA
+ENC-001,Encryption architecture note,encryption_key_management,Infrastructure Lead,2026-04-10,confidential,approved,Architecture repository,Use evidence label in worksheet

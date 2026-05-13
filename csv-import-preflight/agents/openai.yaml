@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSV Import Preflight"
+  short_description: "Catch CSV import failures before upload"
+  default_prompt: "Use $csv-import-preflight to inspect this CSV and produce a risk-ranked import plan before I upload it."

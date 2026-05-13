@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flaky CI Forensics"
+  short_description: "Triage flaky CI test failures"
+  default_prompt: "Use $flaky-ci-forensics to analyze these CI failures, classify flaky-test patterns, estimate rerun cost, and produce a prioritized triage plan."
+

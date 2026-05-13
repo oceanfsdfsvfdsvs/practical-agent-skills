@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workslop Review"
+  short_description: "Gate AI drafts before they create rework"
+  default_prompt: "Use $workslop-review to audit this AI-generated draft and produce a delivery decision plus a minimal repair plan."

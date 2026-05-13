@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Questionnaire Triage"
+  short_description: "Route buyer security questions to evidence-backed answers"
+  default_prompt: "Use $security-questionnaire-triage to triage this buyer security questionnaire, flag unsafe disclosures, and produce an evidence-backed response plan."

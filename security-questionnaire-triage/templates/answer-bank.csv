@@ -1,0 +1,4 @@
+domain,question_pattern,answer,evidence_id,owner,last_reviewed,confidence
+identity_access,mfa|multi-factor,Access to production systems requires MFA and role-based approval.,MFA-001,Security Lead,2026-04-10,high
+encryption_key_management,encryption at rest|in transit,Customer data is encrypted in transit using TLS and encrypted at rest using managed cloud encryption.,ENC-001,Infrastructure Lead,2026-04-10,medium
+compliance_audit,soc 2|type ii,A current SOC 2 Type II report is available to qualified customers under NDA through the approved trust channel.,SOC2-001,GRC Lead,2026-04-10,high

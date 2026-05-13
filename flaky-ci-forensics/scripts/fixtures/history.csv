@@ -1,0 +1,5 @@
+test,runs,failures,rerun_passes,first_seen,last_seen,owner
+tests.e2e.checkout::test_guest_checkout_submits_order,220,17,15,2026-04-21,2026-05-10,checkout-platform
+tests.e2e.checkout::test_payment_webhook_marks_order_paid,180,9,6,2026-04-28,2026-05-10,payments
+tests.unit.pricing::test_discount_rounding,75,1,0,2026-05-10,2026-05-10,pricing
+

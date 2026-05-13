@@ -1,0 +1,3 @@
+display_name: AP Duplicate Payment Preflight
+short_description: Finds duplicate-payment risk in local AP exports before payment release.
+default_prompt: Use the ap-duplicate-payment-preflight skill to inspect the supplied AP invoice or payment-run export, classify duplicate-payment exceptions, preserve reviewer guardrails, and produce a hold/review/release report with row-level evidence.

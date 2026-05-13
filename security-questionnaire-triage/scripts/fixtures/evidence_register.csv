@@ -1,0 +1,5 @@
+evidence_id,title,domain,owner,last_reviewed,confidentiality,status,location,notes
+MFA-001,MFA policy,identity_access,Security Lead,2026-04-15,internal,approved,Policies/MFA.md,Production access requires MFA
+ENC-001,Encryption architecture,encryption_key_management,Infrastructure Lead,2026-03-01,confidential,approved,Architecture/encryption.md,Share summary only
+SOC2-001,SOC 2 Type II report,compliance_audit,GRC Lead,2025-11-20,confidential,approved,Trust portal,Share under NDA
+AI-001,AI data use policy,ai_governance,Legal,2026-02-10,public,approved,Trust center,No training on customer data without explicit agreement

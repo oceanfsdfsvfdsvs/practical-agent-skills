@@ -1,0 +1,11 @@
+{
+  "required_columns": ["Email", "External ID", "signup_date", "zip", "amount", "status"],
+  "unique_columns": ["Email", "External ID"],
+  "date_columns": ["signup_date"],
+  "decimal_columns": ["amount"],
+  "id_columns": ["External ID", "zip"],
+  "email_columns": ["Email"],
+  "enum_columns": {
+    "status": ["active", "inactive"]
+  }
+}

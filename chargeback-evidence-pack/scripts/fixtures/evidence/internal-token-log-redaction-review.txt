@@ -1,0 +1,1 @@
+Fixture file name intentionally includes token to exercise redaction warning.

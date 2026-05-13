@@ -1,0 +1,20 @@
+{
+  "processor": "Stripe",
+  "dispute_id": "dp_test_product_not_received",
+  "reason_category": "product_not_received",
+  "product_type": "physical",
+  "amount": "249.00",
+  "currency": "USD",
+  "deadline": "2026-05-15",
+  "order_id": "10042",
+  "charge_date": "2026-04-27",
+  "tracking_number": "1Z999TEST",
+  "delivered_at": "2026-05-01",
+  "carrier": "UPS",
+  "billing_address_match": "pass",
+  "shipping_address_match": "pass",
+  "avs_result": "pass",
+  "cvv_result": "pass",
+  "refund_status": "not_refunded",
+  "policy_accepted_at": "2026-04-27T10:42:00Z"
+}

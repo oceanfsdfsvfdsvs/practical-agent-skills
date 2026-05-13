@@ -1,0 +1,3 @@
+display_name: Feature Flag Debt Audit
+short_description: Finds stale feature flags and produces safe cleanup plans from local exports and source references.
+default_prompt: Use the feature-flag-debt-audit skill to audit the supplied flag export and repository path, classify cleanup candidates, preserve guardrails, and produce owner-ready tickets with verification steps.

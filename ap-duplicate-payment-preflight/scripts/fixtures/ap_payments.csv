@@ -1,0 +1,10 @@
+vendor_name,vendor_id,invoice_number,invoice_date,payment_date,amount,currency,status,po_number,memo
+Acme Services LLC,V001,INV-1007,2026-05-01,2026-05-08,1250.00,USD,pending,PO-44,May onboarding work
+Acme Services,V001,INV1007,2026-05-02,2026-05-09,1250.00,USD,approved,PO-44,Duplicate entered from OCR
+Blue Harbor Consulting,V002,BH-220,2026-05-03,2026-05-10,980.00,USD,pending,PO-55,Implementation support
+Blue Harbour LLC,V099,BH220,2026-05-04,2026-05-12,980.00,USD,pending,PO-55,Vendor alias from second vendor master
+Cedar Labs,V003,CL-77,2026-04-20,2026-04-25,430.00,USD,paid,PO-18,Already paid in April
+Cedar Labs,V003,CL77,2026-04-21,2026-05-11,430.00,USD,pending,PO-18,Resubmitted bill
+Northwind Office,V004,NW-300,2026-05-05,2026-05-13,500.00,USD,pending,PO-78,Office supplies
+Northwind Office,V004,NW-301,2026-05-07,2026-05-14,500.00,USD,pending,PO-79,Separate supply order
+Metro Utilities,V005,MU-MAY,2026-05-01,2026-05-15,2100.00,USD,pending,,Monthly recurring utility

@@ -1,0 +1,7 @@
+id,question,current_answer
+Q1,Do you enforce MFA for privileged and production access?,Yes
+Q2,Can you provide your SOC 2 Type II report?,
+Q3,Is customer data encrypted at rest and in transit?,Yes
+Q4,Please list your production IP addresses and firewall rules.,
+Q5,Do you train AI models on customer data?,No
+Q6,What are your RTO and RPO for disaster recovery?,We are always available.

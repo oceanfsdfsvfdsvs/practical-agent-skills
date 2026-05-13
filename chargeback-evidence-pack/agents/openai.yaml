@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chargeback Evidence Pack"
+  short_description: "Assemble payment dispute evidence packs"
+  default_prompt: "Use $chargeback-evidence-pack to assess this payment dispute and produce a reason-coded evidence pack before I submit it."

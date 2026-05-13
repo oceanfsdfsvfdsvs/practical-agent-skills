@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="checkout" tests="5" failures="2" errors="1" skipped="0" time="58.2">
+  <testcase classname="tests.e2e.checkout" name="test_guest_checkout_submits_order" time="30.0">
+    <failure message="TimeoutError: waiting for selector [data-testid=place-order] timed out after 30000ms">
+      TimeoutError: page.click: Timeout 30000ms exceeded.
+      waiting for selector [data-testid=place-order]
+    </failure>
+  </testcase>
+  <testcase classname="tests.e2e.checkout" name="test_payment_webhook_marks_order_paid" time="12.1">
+    <error message="ECONNRESET while calling payment sandbox">
+      Error: read ECONNRESET at TLSWrap.onStreamRead
+    </error>
+  </testcase>
+  <testcase classname="tests.unit.pricing" name="test_discount_rounding" time="0.4">
+    <failure message="AssertionError: expected 1099 but got 999">
+      AssertionError: expected 1099 but got 999
+    </failure>
+  </testcase>
+  <testcase classname="tests.unit.cart" name="test_add_item" time="0.2" />
+  <testcase classname="tests.unit.auth" name="test_login_rate_limit" time="0.5" />
+</testsuite>
+
