@@ -1,5 +1,7 @@
 # High Value Agent Skills
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
 
 Each skill is designed to be:
