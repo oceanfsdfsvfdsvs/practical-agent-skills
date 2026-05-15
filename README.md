@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, contract renewals, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
 
 Each skill is designed to be:
 
@@ -17,6 +17,7 @@ Each skill is designed to be:
 |---|---|---|---|
 | [`ap-duplicate-payment-preflight`](ap-duplicate-payment-preflight/SKILL.md) | AP teams reviewing payment runs before ACH/wire/check release. | Duplicate-payment exception report with hold/review rows. | Fixture script covered by `quick_validate.py`. |
 | [`chargeback-evidence-pack`](chargeback-evidence-pack/SKILL.md) | Merchants assembling dispute evidence packs. | Reason-coded evidence inventory and challenge recommendation. | Fixture script covered by `quick_validate.py`. |
+| [`contract-renewal-risk-preflight`](contract-renewal-risk-preflight/SKILL.md) | Procurement, finance, IT, and ops teams reviewing vendor renewals before cancellation windows pass. | Auto-renewal risk report, notice deadlines, owner actions. | Fixture script covered by `quick_validate.py`. |
 | [`csv-import-preflight`](csv-import-preflight/SKILL.md) | Ops/CS teams importing CSV/TSV data into SaaS/admin tools. | Block/review/pass import report with risky rows. | Fixture script covered by `quick_validate.py`. |
 | [`feature-flag-debt-audit`](feature-flag-debt-audit/SKILL.md) | Engineering teams cleaning stale feature flags. | Cleanup candidates, guardrails, code references, tickets. | Fixture script covered by `quick_validate.py`. |
 | [`flaky-ci-forensics`](flaky-ci-forensics/SKILL.md) | Engineering teams triaging intermittent CI/test failures. | Failure cluster, flake confidence, cost estimate, fix plan. | Fixture script covered by `quick_validate.py`. |
@@ -92,6 +93,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 |---|---|---|---|---|
 | `ap-duplicate-payment-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `chargeback-evidence-pack` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `contract-renewal-risk-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `csv-import-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `feature-flag-debt-audit` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `flaky-ci-forensics` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -107,6 +109,7 @@ python3 quick_validate.py
 python3 -m py_compile \
   ap-duplicate-payment-preflight/scripts/ap_duplicate_payment_preflight.py \
   chargeback-evidence-pack/scripts/chargeback_evidence_pack.py \
+  contract-renewal-risk-preflight/scripts/contract_renewal_risk_preflight.py \
   csv-import-preflight/scripts/csv_import_preflight.py \
   feature-flag-debt-audit/scripts/feature_flag_debt_audit.py \
   flaky-ci-forensics/scripts/flaky_ci_forensics.py \

@@ -1,0 +1,5 @@
+vendor,contract_id,owner,department,annual_cost,currency,renewal_date,notice_days,auto_renew,renewal_term,price_increase_cap,termination_notice_method,notice_address,last_review_date,usage_status,notes
+DataDock,CT-1001,Ava Chen,IT,84000,USD,2026-06-30,60,true,12 months,,Written notice by email,legal@datadock.example,2025-02-01,low usage,Replacement planned after migration
+ObservaSuite,CT-1002,Former employee,Engineering,42000,USD,2026-07-15,45,true,12 months,5%,Certified written notice,,2024-03-10,active,Owner left during reorg
+FormsCloud,CT-1003,Mina Patel,Ops,9000,USD,2026-12-31,30,false,12 months,3%,Admin portal,admin@example.com,2026-02-20,active,
+SecureTrain,CT-1004,,Security,18000,USD,2026-08-01,,true,12 months,,Email to account manager,,2023-11-05,duplicate tool,Renewal date known but notice clause missing

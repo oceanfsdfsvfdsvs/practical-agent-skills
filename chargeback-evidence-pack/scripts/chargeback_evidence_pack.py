@@ -304,14 +304,15 @@ def format_case_summary(case: dict[str, Any], reason: str) -> str:
     return "\n".join(lines)
 
 
-def parse_deadline(value: Any) -> str:
+def parse_deadline(value: Any, today: date | None = None) -> str:
     if not value:
         return "Deadline unknown; verify processor response window before drafting."
     try:
         deadline = date.fromisoformat(str(value)[:10])
     except ValueError:
         return "Deadline format not parsed; verify processor response window manually."
-    days = (deadline - datetime.now().date()).days
+    review_date = today or datetime.now().date()
+    days = (deadline - review_date).days
     if days < 0:
         return f"Deadline appears passed by {abs(days)} day(s); confirm whether evidence is still accepted."
     if days <= 2:
@@ -319,7 +320,7 @@ def parse_deadline(value: Any) -> str:
     return f"Deadline check: {days} day(s) remaining."
 
 
-def build_report(case: dict[str, Any], files: list[Path]) -> str:
+def build_report(case: dict[str, Any], files: list[Path], today: date | None = None) -> str:
     reason = normalize_reason(str(case.get("reason_category") or case.get("reason_code") or ""))
     product_type = str(case.get("product_type", "")).strip().lower()
     requirements = REASON_REQUIREMENTS.get(reason, REASON_REQUIREMENTS["unknown"])
@@ -333,7 +334,7 @@ def build_report(case: dict[str, Any], files: list[Path]) -> str:
     missing_required = [item for item in required if item not in present]
     missing_helpful = [item for item in helpful if item not in present]
 
-    if case.get("deadline") and parse_deadline(case["deadline"]).startswith("Deadline appears passed"):
+    if case.get("deadline") and parse_deadline(case["deadline"], today).startswith("Deadline appears passed"):
         decision = "Deadline risk - confirm whether evidence can still be submitted"
     elif missing_required:
         decision = "Blocked until evidence is added"
@@ -349,7 +350,7 @@ def build_report(case: dict[str, Any], files: list[Path]) -> str:
         decision,
         "",
         "## Deadline Check",
-        parse_deadline(case.get("deadline")),
+        parse_deadline(case.get("deadline"), today),
         "",
         format_case_summary(case, reason),
         "",
@@ -417,11 +418,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a chargeback evidence inventory report.")
     parser.add_argument("--case", type=Path, help="Path to a case JSON file.")
     parser.add_argument("--evidence-dir", type=Path, help="Directory containing evidence files.")
+    parser.add_argument("--today", help="Optional review date in YYYY-MM-DD format for stable deadline checks.")
     args = parser.parse_args()
 
+    today = date.fromisoformat(args.today) if args.today else None
     case = load_case(args.case)
     files = collect_files(args.evidence_dir)
-    print(build_report(case, files))
+    print(build_report(case, files, today))
 
 
 if __name__ == "__main__":

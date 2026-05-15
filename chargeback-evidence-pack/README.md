@@ -22,7 +22,8 @@ Build a cleaner chargeback response before the dispute deadline.
 ```bash
 python3 chargeback-evidence-pack/scripts/chargeback_evidence_pack.py \
   --case chargeback-evidence-pack/scripts/fixtures/case_product_not_received.json \
-  --evidence-dir chargeback-evidence-pack/scripts/fixtures/evidence
+  --evidence-dir chargeback-evidence-pack/scripts/fixtures/evidence \
+  --today 2026-05-14
 ```
 
 ## Runtime Notes

@@ -1,0 +1,9 @@
+name: contract-renewal-risk-preflight
+display_name: Contract Renewal Risk Preflight
+short_description: Find vendor auto-renewal, cancellation notice, owner, and spend risks before renewal leverage expires.
+default_prompt: >
+  Use the contract-renewal-risk-preflight skill on the supplied contract inventory,
+  extracted contract clauses, or vendor renewal spreadsheet. Calculate notice
+  deadlines, flag missed or urgent auto-renewal windows, identify owner and
+  notice-method gaps, and produce an owner action plan without giving legal advice
+  or contacting vendors.

@@ -167,7 +167,7 @@ Boundary example: "I only know the processor says fraud and the deadline is tomo
 Smoke-test the bundled fixture:
 
 ```bash
-python3 chargeback-evidence-pack/scripts/chargeback_evidence_pack.py --case chargeback-evidence-pack/scripts/fixtures/case_product_not_received.json --evidence-dir chargeback-evidence-pack/scripts/fixtures/evidence
+python3 chargeback-evidence-pack/scripts/chargeback_evidence_pack.py --case chargeback-evidence-pack/scripts/fixtures/case_product_not_received.json --evidence-dir chargeback-evidence-pack/scripts/fixtures/evidence --today 2026-05-14
 ```
 
 Expected result: a Markdown report that classifies the dispute as product not received for physical goods, marks delivery/order/policy evidence as present, flags customer communication as missing, notes sensitive-file redaction risks when present, and gives a challenge-candidate decision only after owner review.
