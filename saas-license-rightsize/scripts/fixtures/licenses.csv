@@ -1,0 +1,8 @@
+app,email,user_name,plan,license_status,role,monthly_cost,currency,department,owner,renewal_date,contract_id
+Figma,ben.left@example.com,Ben Left,Enterprise,active,member,45,USD,Design,Mia,2026-07-01,FG-2026
+Slack,alex.active@example.com,Alex Active,Business+,active,member,18,USD,Sales,Ravi,2026-08-15,SL-2026
+Notion,dana.viewer@example.com,Dana Viewer,Business,active,member,15,USD,Operations,Iris,2026-06-20,NT-2026
+GitHub,admin.old@example.com,Old Admin,Enterprise,active,admin,40,USD,Engineering,Noah,2026-09-01,GH-2026
+Miro,casey.dup@example.com,Casey Duplicate,Business,active,member,16,USD,Product,Mia,2026-07-15,MR-2026
+Miro,casey.dup@example.com,Casey Duplicate Alias,Business,active,member,16,USD,Product,Mia,2026-07-15,MR-2026
+Adobe,lee.seasonal@example.com,Lee Seasonal,Pro,active,member,60,USD,Marketing,Iris,2026-12-01,AD-2026

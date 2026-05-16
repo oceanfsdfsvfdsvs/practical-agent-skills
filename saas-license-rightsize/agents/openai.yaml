@@ -1,0 +1,9 @@
+name: saas-license-rightsize
+display_name: SaaS License Rightsize
+short_description: Find reclaim, downgrade, duplicate, departed-employee, and stale-admin SaaS license risks from local exports.
+default_prompt: >
+  Use the saas-license-rightsize skill on the supplied SaaS license export,
+  HR roster, and usage report. Identify reclaim, downgrade, duplicate-account,
+  departed-employee, stale-admin, and owner-review opportunities, estimate
+  annual savings, and produce an owner action plan without logging into vendor
+  systems or changing live accounts.

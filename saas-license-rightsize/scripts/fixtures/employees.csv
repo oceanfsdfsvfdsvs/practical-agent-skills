@@ -1,0 +1,6 @@
+email,employee_status,department,manager,termination_date
+alex.active@example.com,active,Sales,Ravi,
+dana.viewer@example.com,active,Operations,Iris,
+casey.dup@example.com,active,Product,Mia,
+lee.seasonal@example.com,active,Marketing,Iris,
+ben.left@example.com,terminated,Design,Mia,2026-02-01

@@ -142,6 +142,29 @@ CHECKS = (
             "uncapped_price_increase",
         ),
     ),
+    Check(
+        name="saas-license-rightsize fixture",
+        command=[
+            sys.executable,
+            "saas-license-rightsize/scripts/saas_license_rightsize.py",
+            "--licenses",
+            "saas-license-rightsize/scripts/fixtures/licenses.csv",
+            "--employees",
+            "saas-license-rightsize/scripts/fixtures/employees.csv",
+            "--usage",
+            "saas-license-rightsize/scripts/fixtures/usage.csv",
+            "--today",
+            "2026-05-17",
+        ],
+        expected_returncodes={0},
+        must_contain=(
+            "License Portfolio Decision",
+            "Potential annual savings",
+            "departed_employee_active_license",
+            "reclaim_now",
+            "downgrade_review",
+        ),
+    ),
 )
 
 
