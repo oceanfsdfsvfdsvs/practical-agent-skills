@@ -1,0 +1,5 @@
+vendor_id,vendor_name,trusted_domain,country,current_routing,current_account_last4,trusted_phone_present
+V-100,Acme Medical Supplies,acme-medical.com,US,021000021,4821,yes
+V-200,Northwind Facilities,northwindfacilities.com,US,121042882,6120,yes
+V-300,Blue Harbor Consulting,blueharborconsulting.com,US,111000025,7744,yes
+V-900,Legacy Office Services,legacyoffice.com,US,026009593,9971,yes

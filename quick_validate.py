@@ -165,6 +165,25 @@ CHECKS = (
             "downgrade_review",
         ),
     ),
+    Check(
+        name="vendor-bank-change-preflight fixture",
+        command=[
+            sys.executable,
+            "vendor-bank-change-preflight/scripts/vendor_bank_change_preflight.py",
+            "--requests",
+            "vendor-bank-change-preflight/scripts/fixtures/bank_change_requests.csv",
+            "--vendor-master",
+            "vendor-bank-change-preflight/scripts/fixtures/vendor_master.csv",
+        ],
+        expected_returncodes={0},
+        must_contain=(
+            "Bank Change Decision",
+            "hold_change",
+            "secondary_verification",
+            "lookalike_email_domain",
+            "bank_account_reused_by_another_vendor",
+        ),
+    ),
 )
 
 

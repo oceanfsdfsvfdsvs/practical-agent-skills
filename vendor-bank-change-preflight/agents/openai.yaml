@@ -1,0 +1,3 @@
+display_name: Vendor Bank Change Preflight
+short_description: Reviews vendor bank-detail changes for payment-redirection risk before AP updates payment instructions.
+default_prompt: Use the vendor-bank-change-preflight skill to inspect the supplied vendor bank-change requests, compare them with vendor-master evidence when available, classify payment-redirection risk, preserve AP control guardrails, and produce a hold/verify/release report with row-level evidence.
