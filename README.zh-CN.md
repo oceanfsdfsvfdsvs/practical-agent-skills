@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -19,6 +19,7 @@
 | [`拒付证据包整理`](chargeback-evidence-pack/SKILL.md) | 商家、电商、支付运营处理拒付/争议。 | 按 reason code 组织的证据清单与挑战建议。 | 已接入 `quick_validate.py` fixture。 |
 | [`合同续约风险预检查`](contract-renewal-risk-preflight/SKILL.md) | 采购、财务、IT、Ops 在供应商续约前检查自动续约和通知窗口。 | 自动续约风险报告、通知截止日、owner 行动计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`CSV 导入预检查`](csv-import-preflight/SKILL.md) | Ops/CS/内部工具团队导入 CSV/TSV 前检查风险。 | Block/review/pass 导入报告和风险行。 | 已接入 `quick_validate.py` fixture。 |
+| [`员工离职访问预检查`](employee-offboarding-access-preflight/SKILL.md) | IT、安全、HR Ops、MSP、合规 owner 在离职或转岗访问 review 关闭前检查残留权限。 | 残留账号、直登 SaaS、session/MFA、密钥、群组、设备的 closure-gate 报告。 | 已接入 `quick_validate.py` fixture。 |
 | [`Feature Flag 债务审计`](feature-flag-debt-audit/SKILL.md) | 工程/平台团队清理陈旧 feature flags。 | 清理候选、保护性 guardrails、代码引用、ticket。 | 已接入 `quick_validate.py` fixture。 |
 | [`不稳定 CI 取证`](flaky-ci-forensics/SKILL.md) | 工程团队分析不稳定 CI/测试失败。 | 失败聚类、flake 置信度、成本估算、修复计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`SaaS 许可证 Rightsize`](saas-license-rightsize/SKILL.md) | IT、财务、采购、MSP、Ops 在续约或预算审查前检查 SaaS 席位。 | reclaim/downgrade/重复账号/离职员工/stale admin 行动计划和节省估算。 | 已接入 `quick_validate.py` fixture。 |
@@ -97,6 +98,7 @@ openclaw skills check <skill-name>
 | 拒付证据包整理 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 合同续约风险预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | CSV 导入预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 员工离职访问预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | Feature Flag 债务审计 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 不稳定 CI 取证 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | SaaS 许可证 Rightsize | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

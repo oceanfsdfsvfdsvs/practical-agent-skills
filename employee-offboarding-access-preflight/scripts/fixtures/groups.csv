@@ -1,0 +1,5 @@
+system,email,group,privileged,contains_sensitive_data,owner
+Google Groups,alex.left@example.com,prod-deployers,true,true,Platform
+Slack,alex.left@example.com,exec-confidential,false,true,People Ops
+GitHub,maya.transfer@example.com,backend-admins,true,true,Engineering
+Google Groups,riley.future@example.com,support-leads,false,false,Support

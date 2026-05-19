@@ -143,6 +143,33 @@ CHECKS = (
         ),
     ),
     Check(
+        name="employee-offboarding-access-preflight fixture",
+        command=[
+            sys.executable,
+            "employee-offboarding-access-preflight/scripts/employee_offboarding_access_preflight.py",
+            "--departures",
+            "employee-offboarding-access-preflight/scripts/fixtures/departures.csv",
+            "--accounts",
+            "employee-offboarding-access-preflight/scripts/fixtures/accounts.csv",
+            "--groups",
+            "employee-offboarding-access-preflight/scripts/fixtures/groups.csv",
+            "--assets",
+            "employee-offboarding-access-preflight/scripts/fixtures/assets.csv",
+            "--secrets",
+            "employee-offboarding-access-preflight/scripts/fixtures/secrets.csv",
+            "--today",
+            "2026-05-20",
+        ],
+        expected_returncodes={0},
+        must_contain=(
+            "Offboarding Access Decision",
+            "revoke_now",
+            "rotate_or_reassign_secret",
+            "shadow_saas_or_direct_login",
+            "privileged_access_after_departure",
+        ),
+    ),
+    Check(
         name="saas-license-rightsize fixture",
         command=[
             sys.executable,

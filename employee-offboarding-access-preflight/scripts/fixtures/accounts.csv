@@ -1,0 +1,6 @@
+app,email,account_status,role,privileged,sso_managed,last_login_date,session_revoked,mfa_revoked,owner,access_type,license_status,notes
+GitHub,alex.left@example.com,active,Org Owner,true,true,2026-05-19,false,false,Platform Team,SSO,paid,Still member of production repos
+Figma,alex.left@example.com,active,Admin,false,false,2026-05-19,unknown,unknown,Design Ops,direct-login,paid,Direct login created before SSO rollout
+Google Workspace,alex.left@example.com,suspended,Member,false,true,2026-05-18,true,true,IT,SSO,paid,Base identity suspended
+AWS,maya.transfer@example.com,active,PowerUser,true,true,2026-05-19,true,true,Cloud Team,SSO,paid,Old engineering role should be removed after transfer
+Slack,riley.future@example.com,active,Member,false,true,2026-05-19,false,false,IT,SSO,paid,Future voluntary departure

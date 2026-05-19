@@ -1,0 +1,7 @@
+display_name: Employee Offboarding Access Preflight
+short_description: Find lingering access, direct-login SaaS, sessions, devices, and secrets before offboarding closure.
+default_prompt: |
+  Use employee-offboarding-access-preflight on these HR departure and access exports.
+  Join the departure roster to account, group, device, and secret-owner data; flag lingering access,
+  privileged roles, direct-login SaaS, active sessions or MFA, unreturned assets, and unrotated secrets;
+  then produce a closure-gate report with revoke, rotate, recover, and evidence actions.

@@ -1,0 +1,4 @@
+email,name,employment_status,termination_date,last_working_day,separation_type,role,department,manager,risk_level,disable_by,knowledge_transfer_owner
+alex.left@example.com,Alex Left,terminated,2026-05-18,2026-05-18,involuntary,Engineering Manager,Engineering,Casey Manager,high,2026-05-18T09:00:00,Sam Owner
+maya.transfer@example.com,Maya Transfer,active,,2026-05-19,role_change,Senior Engineer to Product Manager,Product,Pat Manager,medium,2026-05-21T17:00:00,Jordan PM
+riley.future@example.com,Riley Future,notice,2026-05-28,2026-05-28,voluntary,Support Lead,Support,Drew Manager,low,2026-05-28T17:00:00,Taylor Lead

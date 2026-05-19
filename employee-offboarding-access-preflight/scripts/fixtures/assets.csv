@@ -1,0 +1,5 @@
+asset_id,email,asset_type,status,returned_at,wipe_status,contains_sensitive_data
+MDM-991,alex.left@example.com,MacBook,assigned,,not_wiped,true
+BADGE-442,alex.left@example.com,badge,returned,2026-05-18,not_applicable,false
+MDM-884,maya.transfer@example.com,MacBook,assigned,,managed,true
+YUBI-123,riley.future@example.com,hardware_token,assigned,,not_applicable,false
