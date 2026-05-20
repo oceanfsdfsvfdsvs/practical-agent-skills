@@ -143,6 +143,29 @@ CHECKS = (
         ),
     ),
     Check(
+        name="customer-escalation-timeline fixture",
+        command=[
+            sys.executable,
+            "customer-escalation-timeline/scripts/customer_escalation_timeline.py",
+            "--tickets",
+            "customer-escalation-timeline/scripts/fixtures/tickets.csv",
+            "--events",
+            "customer-escalation-timeline/scripts/fixtures/events.csv",
+            "--accounts",
+            "customer-escalation-timeline/scripts/fixtures/accounts.csv",
+            "--now",
+            "2026-05-21T09:00:00",
+        ],
+        expected_returncodes={0},
+        must_contain=(
+            "Escalation Timeline Decision",
+            "owner_acceptance_required",
+            "customer_update_due",
+            "handoff_packet_required",
+            "repeat_contact_or_fix_validation",
+        ),
+    ),
+    Check(
         name="employee-offboarding-access-preflight fixture",
         command=[
             sys.executable,

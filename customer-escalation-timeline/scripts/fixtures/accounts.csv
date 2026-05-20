@@ -1,0 +1,4 @@
+customer_id,account,revenue_tier,renewal_date,arr,health_score,csm,ae,past_escalations_90d
+C-001,Northstar Labs,Enterprise,2026-06-10,180000,42,Rae Chen,Avery Stone,3
+C-002,Blue Harbor,Pro,2026-05-30,72000,55,Sam Ortiz,Nora Kim,1
+C-003,Acme Retail,Standard,2026-11-01,25000,78,Ian Fox,Leah Green,2

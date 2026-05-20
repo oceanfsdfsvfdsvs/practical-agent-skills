@@ -1,0 +1,3 @@
+display_name: Customer Escalation Timeline
+short_description: Reconstructs support escalation timelines and handoff packets from local ticket, event, and account exports.
+default_prompt: Use the customer-escalation-timeline skill to inspect the supplied support ticket, escalation event, and account context exports, classify ownership, SLA, handoff, customer-update, and root-cause follow-up risks, preserve the no-live-ticket-modification boundary, and produce a reviewer-ready escalation timeline report.

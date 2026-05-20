@@ -1,0 +1,10 @@
+ticket_id,event_time,event_type,actor,channel,team,owner,message,next_step,due_at,linked_item
+T-1001,2026-05-20T13:10:00,customer_message,customer,email,,,"Checkout fails for 40% of orders after launch; customer says launch is blocked.",,,
+T-1001,2026-05-20T13:30:00,troubleshooting,L1 agent,ticket,Support,L1 agent,"Cleared cache and tested another browser; no change. Test account works.",Escalate to engineering,2026-05-20T14:00:00,
+T-1001,2026-05-20T14:05:00,handoff,L1 agent,slack,Engineering Queue,,"Waiting on engineering. Customer angry.",,,
+T-1001,2026-05-21T08:40:00,customer_followup,customer,email,,,"Any update? We are losing orders.",,,
+T-1002,2026-05-20T08:00:00,handoff,CSM,slack,Billing Ops,Mina Patel,"Customer says onboarding promised different renewal price; sales notes are in CRM.",Check billing contract and send customer update,2026-05-20T15:00:00,
+T-1002,2026-05-20T16:20:00,internal_note,Billing Ops,ticket,Billing Ops,Mina Patel,"Still investigating.",,,
+T-1003,2026-05-16T11:00:00,handoff,Support L1,ticket,Support L2,Jon Lee,"Export bug escalated; customer sees timeout.",Investigate report export worker,2026-05-17T10:00:00,JIRA-244
+T-1003,2026-05-20T16:00:00,resolution,Support L2,ticket,Support L2,Jon Lee,"Marked fixed after deploy; no post-fix ticket volume check recorded.",Close after deploy,2026-05-20T16:00:00,JIRA-244
+T-1003,2026-05-21T08:20:00,customer_followup,customer,email,,,"Same export timeout happened again after fix.",,,

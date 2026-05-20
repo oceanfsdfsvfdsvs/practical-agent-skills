@@ -1,0 +1,4 @@
+ticket_id,customer_id,account,subject,status,severity,priority,created_at,first_response_at,escalated_at,sla_due_at,resolved_at,assigned_team,assignee,product_area,root_cause,sentiment,renewal_date,arr
+T-1001,C-001,Northstar Labs,Checkout failures during launch,open,Sev 2,high,2026-05-20T13:10:00,2026-05-20T13:25:00,2026-05-20T14:05:00,2026-05-21T09:30:00,,Engineering Queue,,Checkout,,angry,2026-06-10,180000
+T-1002,C-002,Blue Harbor,Renewal pricing mismatch after onboarding promise,open,Sev 3,medium,2026-05-19T10:00:00,2026-05-19T12:20:00,2026-05-20T08:00:00,2026-05-21T17:00:00,,Billing Ops,Mina Patel,Billing,pricing_promise,frustrated,2026-05-30,72000
+T-1003,C-003,Acme Retail,Export bug marked fixed but customer reopened,resolved,Sev 3,medium,2026-05-16T09:00:00,2026-05-16T09:40:00,2026-05-16T11:00:00,2026-05-18T17:00:00,2026-05-20T16:00:00,Support L2,Jon Lee,Reports,,neutral,2026-11-01,25000
