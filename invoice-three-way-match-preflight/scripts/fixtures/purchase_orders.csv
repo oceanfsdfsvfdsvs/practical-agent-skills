@@ -1,0 +1,6 @@
+po_number,vendor_id,vendor_name,line_id,item_sku,description,ordered_quantity,unit_price,line_amount,currency,status,approved
+PO-7001,V-100,Northstar Supplies,10,DRILL-SET,Drill sets,10,42.00,420.00,USD,approved,yes
+PO-7002,V-200,Metro Components,20,VALVE-A,Valve assembly,20,18.00,360.00,USD,approved,yes
+PO-7003,V-300,Eastline Freight,10,FREIGHT-STD,Freight surcharge,1,175.00,175.00,USD,approved,yes
+PO-7004,V-400,Acme Industrial,10,BEARING-9,Bearings,5,64.00,320.00,USD,approved,yes
+PO-7006,V-600,West Plant Maintenance,30,MOTOR-7,Replacement motor,3,180.00,540.00,USD,cancelled,no

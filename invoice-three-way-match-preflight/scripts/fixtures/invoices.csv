@@ -1,0 +1,7 @@
+invoice_number,vendor_id,vendor_name,po_number,line_id,item_sku,description,quantity,unit_price,line_amount,currency,invoice_date,approval_status,tax_amount,shipping_amount,memo
+INV-7801,V-100,Northstar Supplies,PO-7001,10,DRILL-SET,Drill sets,10,42.00,420.00,USD,2026-05-19,pending,0,0,
+INV-7802,V-200,Metro Components,PO-7002,20,VALVE-A,Valve assembly,24,18.00,432.00,USD,2026-05-19,approved,0,0,receipt pending
+INV-7803,V-300,Eastline Freight,PO-7003,10,FREIGHT-STD,Freight surcharge,1,225.00,225.00,USD,2026-05-20,pending,0,0,
+INV-7804,V-999,Acme Industrial,PO-7004,10,BEARING-9,Bearings,5,64.00,320.00,USD,2026-05-20,approved,0,0,
+INV-7805,V-500,OfficePro,,10,PAPER-A4,A4 paper,20,6.00,120.00,USD,2026-05-20,pending,0,0,no PO on invoice
+INV-7806,V-600,West Plant Maintenance,PO-7006,30,MOTOR-7,Replacement motor,3,180.00,540.00,USD,2026-05-20,approved,0,0,

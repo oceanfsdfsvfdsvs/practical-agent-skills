@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, invoice matching, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
 
 Each skill is designed to be:
 
@@ -23,6 +23,7 @@ Each skill is designed to be:
 | [`employee-offboarding-access-preflight`](employee-offboarding-access-preflight/SKILL.md) | IT, security, HR ops, MSPs, and compliance owners closing departure or role-change access reviews. | Lingering access, direct-login SaaS, session/MFA, secret, group, and device closure-gate report. | Fixture script covered by `quick_validate.py`. |
 | [`feature-flag-debt-audit`](feature-flag-debt-audit/SKILL.md) | Engineering teams cleaning stale feature flags. | Cleanup candidates, guardrails, code references, tickets. | Fixture script covered by `quick_validate.py`. |
 | [`flaky-ci-forensics`](flaky-ci-forensics/SKILL.md) | Engineering teams triaging intermittent CI/test failures. | Failure cluster, flake confidence, cost estimate, fix plan. | Fixture script covered by `quick_validate.py`. |
+| [`invoice-three-way-match-preflight`](invoice-three-way-match-preflight/SKILL.md) | AP, procurement, receiving, and ops teams reviewing invoice/PO/receipt mismatches before payment release. | Three-way match exception report with hold/route rows and owner-specific next steps. | Fixture script covered by `quick_validate.py`. |
 | [`saas-license-rightsize`](saas-license-rightsize/SKILL.md) | IT, finance, procurement, MSP, and ops teams auditing SaaS seats before renewals or budget reviews. | Reclaim, downgrade, duplicate-account, stale-admin, and owner-review plan with savings estimate. | Fixture script covered by `quick_validate.py`. |
 | [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B teams answering security questionnaires. | Evidence-backed answer draft and escalation labels. | Fixture script covered by `quick_validate.py`. |
 | [`vendor-bank-change-preflight`](vendor-bank-change-preflight/SKILL.md) | Finance, AP, accounting, and procurement teams reviewing supplier bank-detail changes before payment. | Payment-redirection risk report with hold/verify/release actions. | Fixture script covered by `quick_validate.py`. |
@@ -103,6 +104,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `employee-offboarding-access-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `feature-flag-debt-audit` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `flaky-ci-forensics` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `invoice-three-way-match-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `saas-license-rightsize` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `security-questionnaire-triage` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `vendor-bank-change-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -123,6 +125,7 @@ python3 -m py_compile \
   employee-offboarding-access-preflight/scripts/employee_offboarding_access_preflight.py \
   feature-flag-debt-audit/scripts/feature_flag_debt_audit.py \
   flaky-ci-forensics/scripts/flaky_ci_forensics.py \
+  invoice-three-way-match-preflight/scripts/invoice_three_way_match_preflight.py \
   saas-license-rightsize/scripts/saas_license_rightsize.py \
   security-questionnaire-triage/scripts/security_questionnaire_triage.py \
   vendor-bank-change-preflight/scripts/vendor_bank_change_preflight.py \

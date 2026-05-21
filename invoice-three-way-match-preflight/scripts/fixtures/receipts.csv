@@ -1,0 +1,5 @@
+po_number,line_id,item_sku,received_quantity,rejected_quantity,receipt_date,status
+PO-7001,10,DRILL-SET,10,0,2026-05-18,received
+PO-7002,20,VALVE-A,18,0,2026-05-18,partial
+PO-7003,10,FREIGHT-STD,1,0,2026-05-19,received
+PO-7004,10,BEARING-9,5,0,2026-05-19,received

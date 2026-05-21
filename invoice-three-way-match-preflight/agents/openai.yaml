@@ -1,0 +1,8 @@
+name: invoice-three-way-match-preflight
+display_name: Invoice Three-Way Match Preflight
+short_description: Review invoices against POs and receipts before payment release.
+default_prompt: >
+  Use the invoice-three-way-match-preflight skill to compare local invoice,
+  purchase-order, and receipt exports. Run the bundled script when file paths
+  are available, classify exceptions by risk and owner, and return a Markdown
+  payment-review packet without approving, posting, or paying live invoices.

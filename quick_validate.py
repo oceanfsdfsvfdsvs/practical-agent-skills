@@ -234,6 +234,28 @@ CHECKS = (
             "bank_account_reused_by_another_vendor",
         ),
     ),
+    Check(
+        name="invoice-three-way-match-preflight fixture",
+        command=[
+            sys.executable,
+            "invoice-three-way-match-preflight/scripts/invoice_three_way_match_preflight.py",
+            "--invoices",
+            "invoice-three-way-match-preflight/scripts/fixtures/invoices.csv",
+            "--purchase-orders",
+            "invoice-three-way-match-preflight/scripts/fixtures/purchase_orders.csv",
+            "--receipts",
+            "invoice-three-way-match-preflight/scripts/fixtures/receipts.csv",
+        ],
+        expected_returncodes={0},
+        must_contain=(
+            "Three-Way Match Decision",
+            "hold_invoice",
+            "invoice_quantity_exceeds_received",
+            "unit_price_variance",
+            "vendor_mismatch",
+            "closed_or_cancelled_po",
+        ),
+    ),
 )
 
 
