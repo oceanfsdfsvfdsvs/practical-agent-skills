@@ -1,0 +1,9 @@
+name: utm-governance-preflight
+display_name: UTM Governance Preflight
+short_description: Review campaign URLs for UTM naming drift, missing parameters, aliases, source/medium swaps, and sensitive public labels.
+default_prompt: >
+  Use the utm-governance-preflight skill on the supplied campaign link export
+  and UTM policy. Identify missing required UTMs, source/medium swaps, aliases,
+  mixed case, unsafe values, campaign format drift, and sensitive public labels.
+  Produce a launch-gate report with owner-specific fixes without calling ad,
+  analytics, CRM, or URL-shortener APIs.

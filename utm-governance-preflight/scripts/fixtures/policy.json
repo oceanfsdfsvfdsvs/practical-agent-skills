@@ -1,0 +1,16 @@
+{
+  "required_parameters": ["utm_source", "utm_medium", "utm_campaign"],
+  "allowed_sources": ["newsletter", "facebook", "linkedin", "google", "partnerco"],
+  "source_aliases": {
+    "fb": "facebook",
+    "facebook.com": "facebook",
+    "li": "linkedin"
+  },
+  "allowed_media": ["email", "paid-social", "cpc", "organic-social", "affiliate", "event"],
+  "medium_aliases": {
+    "paid": "paid-social",
+    "social": "organic-social"
+  },
+  "campaign_pattern": "^20[0-9]{2}-q[1-4]-[a-z0-9]+(?:-[a-z0-9]+)*$",
+  "sensitive_terms": ["budget-cut", "fired", "desperation", "competitor-extermination", "please-convert"]
+}

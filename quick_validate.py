@@ -216,6 +216,26 @@ CHECKS = (
         ),
     ),
     Check(
+        name="utm-governance-preflight fixture",
+        command=[
+            sys.executable,
+            "utm-governance-preflight/scripts/utm_governance_preflight.py",
+            "--links",
+            "utm-governance-preflight/scripts/fixtures/campaign_links.csv",
+            "--policy",
+            "utm-governance-preflight/scripts/fixtures/policy.json",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "UTM Governance Decision",
+            "Block launch",
+            "missing_required_utm",
+            "source_medium_swapped",
+            "sensitive_internal_term",
+            "alias_to_canonical_source",
+        ),
+    ),
+    Check(
         name="vendor-bank-change-preflight fixture",
         command=[
             sys.executable,

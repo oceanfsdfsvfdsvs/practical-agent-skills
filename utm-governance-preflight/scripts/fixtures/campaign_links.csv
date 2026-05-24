@@ -1,0 +1,7 @@
+link_id,owner,channel,url
+launch-email-1,Demand Gen,email,https://example.com/demo?utm_source=newsletter&utm_medium=email&utm_campaign=2026-q2-email-product-launch&utm_content=hero-a
+launch-paid-1,Paid Social,paid social,https://example.com/demo?utm_source=Facebook&utm_medium=paid-social&utm_campaign=Spring Launch&utm_content=carousel ad
+launch-paid-2,Paid Social,paid social,https://example.com/demo?utm_source=fb&utm_medium=cpc&utm_campaign=2026-q2-facebook-product-launch&utm_content=variant-a
+launch-bad-1,Agency,paid social,https://example.com/demo?utm_medium=facebook&utm_source=cpc&utm_campaign=2026-q2-paid-social-demo&utm_content=please-convert-before-budget-cut
+launch-partner-1,Partner,partner,https://example.com/demo?utm_source=partnerco&utm_medium=affiliate&utm_campaign=2026-q2-partner-webinar
+launch-missing-1,Events,events,https://example.com/event?utm_source=linkedin&utm_campaign=2026-q2-event-roadshow

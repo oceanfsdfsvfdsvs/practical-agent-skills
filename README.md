@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, invoice matching, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, invoice matching, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -26,6 +26,7 @@ Each skill is designed to be:
 | [`invoice-three-way-match-preflight`](invoice-three-way-match-preflight/SKILL.md) | AP, procurement, receiving, and ops teams reviewing invoice/PO/receipt mismatches before payment release. | Three-way match exception report with hold/route rows and owner-specific next steps. | Fixture script covered by `quick_validate.py`. |
 | [`saas-license-rightsize`](saas-license-rightsize/SKILL.md) | IT, finance, procurement, MSP, and ops teams auditing SaaS seats before renewals or budget reviews. | Reclaim, downgrade, duplicate-account, stale-admin, and owner-review plan with savings estimate. | Fixture script covered by `quick_validate.py`. |
 | [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B teams answering security questionnaires. | Evidence-backed answer draft and escalation labels. | Fixture script covered by `quick_validate.py`. |
+| [`utm-governance-preflight`](utm-governance-preflight/SKILL.md) | Marketing ops, growth, RevOps, analytics, and agency teams reviewing campaign links before launch or reporting freeze. | UTM launch-gate report with missing parameter, alias, source/medium swap, naming drift, and sensitive-label fixes. | Fixture script covered by `quick_validate.py`. |
 | [`vendor-bank-change-preflight`](vendor-bank-change-preflight/SKILL.md) | Finance, AP, accounting, and procurement teams reviewing supplier bank-detail changes before payment. | Payment-redirection risk report with hold/verify/release actions. | Fixture script covered by `quick_validate.py`. |
 | [`workslop-review`](workslop-review/SKILL.md) | Managers and ICs reviewing vague AI-assisted work output. | Rubric-based critique and accountable rewrite. | Prompt/workflow skill; no script required. |
 
@@ -107,6 +108,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `invoice-three-way-match-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `saas-license-rightsize` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `security-questionnaire-triage` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `utm-governance-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `vendor-bank-change-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `workslop-review` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | No, prompt workflow |
 
@@ -128,6 +130,7 @@ python3 -m py_compile \
   invoice-three-way-match-preflight/scripts/invoice_three_way_match_preflight.py \
   saas-license-rightsize/scripts/saas_license_rightsize.py \
   security-questionnaire-triage/scripts/security_questionnaire_triage.py \
+  utm-governance-preflight/scripts/utm_governance_preflight.py \
   vendor-bank-change-preflight/scripts/vendor_bank_change_preflight.py \
   quick_validate.py
 ```
