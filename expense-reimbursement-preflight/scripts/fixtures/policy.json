@@ -1,0 +1,20 @@
+{
+  "receipt_required_over": "25.00",
+  "itemized_required_over": "75.00",
+  "attendees_required_over": "75.00",
+  "max_submission_age_days": 60,
+  "mileage_rate": "0.70",
+  "allowed_currencies": ["USD"],
+  "category_limits": {
+    "client_meal": "200.00",
+    "meal": "75.00",
+    "lodging": "350.00",
+    "supplies": "100.00",
+    "mileage": "500.00"
+  },
+  "receipt_required_categories": ["client_meal", "lodging", "airfare", "supplies"],
+  "itemized_required_categories": ["meal", "client_meal", "lodging"],
+  "attendee_required_categories": ["meal", "client_meal", "event"],
+  "prohibited_categories": ["personal", "gift_card", "cash_advance"],
+  "sensitive_terms": ["personal", "gift card", "cash advance"]
+}

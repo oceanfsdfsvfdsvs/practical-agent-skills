@@ -1,0 +1,7 @@
+report_id,employee,expense_date,submitted_date,category,merchant,amount,currency,receipt_id,receipt_attached,itemized_receipt,business_purpose,attendees,project,gl_code,miles,notes
+ER-1001,Avery Chen,2026-05-10,2026-05-24,client_meal,North Pier Grill,236.40,USD,RCPT-7781,yes,no,Client renewal dinner,,Enterprise Renewal,6120,,VP and customer dinner
+ER-1001,Avery Chen,2026-05-10,2026-05-24,client_meal,North Pier Grill,236.40,USD,RCPT-7781,yes,no,Client renewal dinner,,Enterprise Renewal,6120,,duplicate upload from email
+ER-1002,Blair Patel,2026-05-15,2026-05-20,supplies,OfficeMax,186.19,USD,,no,no,Workshop materials,,"",6510,,receipt lost in inbox
+ER-1003,Casey Morgan,2026-03-01,2026-05-26,mileage,Field visit route,98.00,USD,MILE-044,yes,yes,Customer site visit,,Field Ops,6250,120,claimed above policy rate
+ER-1004,Drew Rivera,2026-05-18,2026-05-19,gift_card,Amazon,150.00,USD,AMZ-990,yes,yes,Team reward,N/A,People Ops,6600,,gift card for employee award
+ER-1005,Emi Stone,2026-05-21,2026-05-22,lodging,Harbor Hotel,289.00,USD,HH-381,yes,yes,Conference travel,N/A,Marketing,6210,,

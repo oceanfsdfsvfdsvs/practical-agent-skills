@@ -276,6 +276,28 @@ CHECKS = (
             "closed_or_cancelled_po",
         ),
     ),
+    Check(
+        name="expense-reimbursement-preflight fixture",
+        command=[
+            sys.executable,
+            "expense-reimbursement-preflight/scripts/expense_reimbursement_preflight.py",
+            "--expenses",
+            "expense-reimbursement-preflight/scripts/fixtures/expense_report.csv",
+            "--policy",
+            "expense-reimbursement-preflight/scripts/fixtures/policy.json",
+            "--today",
+            "2026-05-26",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Expense Reimbursement Decision",
+            "Hold reimbursement",
+            "missing_receipt",
+            "duplicate_receipt_or_charge",
+            "meal_attendees_missing",
+            "mileage_rate_exceeds_policy",
+        ),
+    ),
 )
 
 

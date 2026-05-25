@@ -1,0 +1,7 @@
+display_name: Expense Reimbursement Preflight
+short_description: Find reimbursement receipt, duplicate, policy, mileage, attendee, purpose, and coding exceptions from local exports.
+default_prompt: |
+  Use expense-reimbursement-preflight on the supplied employee reimbursement or expense-report export.
+  Apply the user's local policy when available; otherwise mark bundled defaults as provisional. Run the bundled
+  local script when file paths are available, classify hold/review/correction exceptions, and produce a row-level
+  reimbursement exception report without approving, rejecting, or editing live expense-system records.
