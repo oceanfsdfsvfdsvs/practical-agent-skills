@@ -1,0 +1,7 @@
+bill_id,provider,service_date,cpt,description,charge,patient_balance,insurance_processed,network_status,facility_type,itemized,notes
+B-1001,Metro ER,2026-04-02,99284,Emergency department visit,2200.00,500.00,yes,in_network,emergency,yes,EOB says lower responsibility
+B-1002,Metro ER,2026-04-02,73030,Shoulder x-ray,700.00,0.00,yes,in_network,emergency,yes,duplicate charge appears twice
+B-1003,Metro ER,2026-04-02,73030,Shoulder x-ray,700.00,0.00,yes,in_network,emergency,yes,duplicate charge appears twice
+B-1004,Coastal Anesthesia,2026-04-02,00812,Anesthesia services,1400.00,1400.00,no,out_of_network,in_network_hospital,no,facility-based out-of-network bill before EOB
+B-1005,Regional Lab,2026-04-03,,Lab panel summary,450.00,450.00,yes,in_network,lab,no,no CPT details on statement
+B-1006,Advanced Imaging,2026-04-05,70553,MRI brain with contrast,2400.00,2400.00,yes,in_network,imaging,yes,EOB denied for missing prior authorization

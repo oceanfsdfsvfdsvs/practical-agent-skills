@@ -277,6 +277,29 @@ CHECKS = (
         ),
     ),
     Check(
+        name="medical-bill-dispute-preflight fixture",
+        command=[
+            sys.executable,
+            "medical-bill-dispute-preflight/scripts/medical_bill_dispute_preflight.py",
+            "--bills",
+            "medical-bill-dispute-preflight/scripts/fixtures/medical_bills.csv",
+            "--eob",
+            "medical-bill-dispute-preflight/scripts/fixtures/eob.csv",
+            "--policy",
+            "medical-bill-dispute-preflight/scripts/fixtures/policy.json",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Medical Bill Dispute Decision",
+            "Hold payment pending reconciliation",
+            "balance_exceeds_eob_patient_responsibility",
+            "missing_eob_or_unprocessed_insurance",
+            "request_itemized_bill",
+            "no_surprises_review",
+            "appeal_review",
+        ),
+    ),
+    Check(
         name="expense-reimbursement-preflight fixture",
         command=[
             sys.executable,

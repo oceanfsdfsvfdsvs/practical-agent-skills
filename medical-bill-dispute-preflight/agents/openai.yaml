@@ -1,0 +1,7 @@
+display_name: Medical Bill Dispute Preflight
+short_description: Compare patient medical bills with EOBs to find pay-hold, itemization, appeal, reconciliation, and surprise-billing review flags.
+default_prompt: |
+  Use medical-bill-dispute-preflight on the supplied patient medical bill, itemized statement, and EOB exports.
+  Preserve privacy boundaries, run the bundled local script when file paths are available, classify billing exceptions,
+  and produce a dispute preflight report with packet checklist and next steps. Do not provide medical, legal,
+  credit-repair, or guaranteed insurance-coverage advice.

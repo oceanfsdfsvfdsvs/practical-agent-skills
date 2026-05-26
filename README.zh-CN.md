@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、发票三方匹配、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、发票三方匹配、医疗账单争议预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -25,6 +25,7 @@
 | [`Feature Flag 债务审计`](feature-flag-debt-audit/SKILL.md) | 工程/平台团队清理陈旧 feature flags。 | 清理候选、保护性 guardrails、代码引用、ticket。 | 已接入 `quick_validate.py` fixture。 |
 | [`不稳定 CI 取证`](flaky-ci-forensics/SKILL.md) | 工程团队分析不稳定 CI/测试失败。 | 失败聚类、flake 置信度、成本估算、修复计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`发票三方匹配预检查`](invoice-three-way-match-preflight/SKILL.md) | AP、采购、收货、Ops 在付款前审核发票/PO/收货异常。 | 三方匹配异常报告，标记 hold/route 行和 owner 下一步。 | 已接入 `quick_validate.py` fixture。 |
+| [`医疗账单争议预检查`](medical-bill-dispute-preflight/SKILL.md) | 患者、照护者、福利顾问和 HR benefits 团队在付款或升级争议前检查医疗账单。 | Bill-vs-EOB 异常报告，标记暂停付款、索要明细、申诉复核、provider/insurer reconciliation、surprise-billing review 和经济援助下一步。 | 已接入 `quick_validate.py` fixture。 |
 | [`SaaS 许可证 Rightsize`](saas-license-rightsize/SKILL.md) | IT、财务、采购、MSP、Ops 在续约或预算审查前检查 SaaS 席位。 | reclaim/downgrade/重复账号/离职员工/stale admin 行动计划和节省估算。 | 已接入 `quick_validate.py` fixture。 |
 | [`安全问卷分流`](security-questionnaire-triage/SKILL.md) | B2B 团队回答安全问卷。 | 基于证据的回答草稿和升级标签。 | 已接入 `quick_validate.py` fixture。 |
 | [`UTM 治理预检查`](utm-governance-preflight/SKILL.md) | Marketing Ops、增长、RevOps、分析和代理团队在 campaign 上线或报表冻结前检查链接。 | UTM launch gate 报告，标记缺失参数、别名漂移、source/medium 互换、命名漂移和敏感公开标签。 | 已接入 `quick_validate.py` fixture。 |
@@ -108,6 +109,7 @@ openclaw skills check <skill-name>
 | Feature Flag 债务审计 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 不稳定 CI 取证 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 发票三方匹配预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 医疗账单争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | SaaS 许可证 Rightsize | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 安全问卷分流 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | UTM 治理预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

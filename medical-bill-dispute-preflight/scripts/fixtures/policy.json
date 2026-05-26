@@ -1,0 +1,19 @@
+{
+  "balance_tolerance": "1.00",
+  "financial_assistance_balance_over": "1000.00",
+  "surprise_facility_types": [
+    "emergency",
+    "in_network_hospital",
+    "hospital_outpatient"
+  ],
+  "facility_based_terms": [
+    "anesthesia",
+    "radiology",
+    "pathology",
+    "lab",
+    "assistant surgeon",
+    "hospitalist",
+    "intensivist",
+    "neonatology"
+  ]
+}

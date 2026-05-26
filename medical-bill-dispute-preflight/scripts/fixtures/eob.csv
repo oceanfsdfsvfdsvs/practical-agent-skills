@@ -1,0 +1,4 @@
+claim_id,provider,service_date,cpt,description,allowed_amount,plan_paid,patient_responsibility,denial_code,denial_reason,network_status
+C-2001,Metro ER,2026-04-02,99284,Emergency department visit,900.00,786.00,114.00,,,in_network
+C-2002,Metro ER,2026-04-02,73030,Shoulder x-ray,120.00,120.00,0.00,,,in_network
+C-2003,Advanced Imaging,2026-04-05,70553,MRI brain with contrast,0.00,0.00,2400.00,PA_REQUIRED,Prior authorization missing,in_network
