@@ -1,0 +1,6 @@
+display_name: Home Inventory Claim Preflight
+short_description: Review contents inventory exports for insurance-claim evidence gaps, valuation support issues, sublimit clues, duplicates, and adjuster packet readiness.
+default_prompt: |
+  Use home-inventory-claim-preflight on the supplied homeowners or renters contents inventory and optional policy export.
+  Preserve privacy boundaries, run the bundled local script when file paths are available, classify row-level evidence and policy-review gaps,
+  and produce an adjuster packet checklist. Do not provide legal, coverage, valuation, tax, or public-adjuster advice.

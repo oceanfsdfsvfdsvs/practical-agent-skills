@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, invoice matching, medical bill disputes, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, invoice matching, insurance claim inventory checks, medical bill disputes, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -24,6 +24,7 @@ Each skill is designed to be:
 | [`expense-reimbursement-preflight`](expense-reimbursement-preflight/SKILL.md) | Finance, ops, managers, and founders reviewing employee reimbursement reports before approval, payroll, or ERP export. | Receipt, duplicate, policy-limit, mileage, attendee, purpose, and coding exception report. | Fixture script covered by `quick_validate.py`. |
 | [`feature-flag-debt-audit`](feature-flag-debt-audit/SKILL.md) | Engineering teams cleaning stale feature flags. | Cleanup candidates, guardrails, code references, tickets. | Fixture script covered by `quick_validate.py`. |
 | [`flaky-ci-forensics`](flaky-ci-forensics/SKILL.md) | Engineering teams triaging intermittent CI/test failures. | Failure cluster, flake confidence, cost estimate, fix plan. | Fixture script covered by `quick_validate.py`. |
+| [`home-inventory-claim-preflight`](home-inventory-claim-preflight/SKILL.md) | Homeowners, renters, caregivers, and claims helpers preparing contents inventories before adjuster submission. | Contents claim evidence-gap report with ownership, damage, valuation, sublimit, duplicate, and packet-readiness flags. | Fixture script covered by `quick_validate.py`. |
 | [`invoice-three-way-match-preflight`](invoice-three-way-match-preflight/SKILL.md) | AP, procurement, receiving, and ops teams reviewing invoice/PO/receipt mismatches before payment release. | Three-way match exception report with hold/route rows and owner-specific next steps. | Fixture script covered by `quick_validate.py`. |
 | [`medical-bill-dispute-preflight`](medical-bill-dispute-preflight/SKILL.md) | Patients, caregivers, benefits advocates, and HR benefits teams reviewing medical bills before payment or dispute escalation. | Bill-vs-EOB exception report with hold, itemization, appeal, reconciliation, surprise-billing, and financial-assistance next steps. | Fixture script covered by `quick_validate.py`. |
 | [`saas-license-rightsize`](saas-license-rightsize/SKILL.md) | IT, finance, procurement, MSP, and ops teams auditing SaaS seats before renewals or budget reviews. | Reclaim, downgrade, duplicate-account, stale-admin, and owner-review plan with savings estimate. | Fixture script covered by `quick_validate.py`. |
@@ -108,6 +109,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `expense-reimbursement-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `feature-flag-debt-audit` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `flaky-ci-forensics` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `home-inventory-claim-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `invoice-three-way-match-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `medical-bill-dispute-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `saas-license-rightsize` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -132,6 +134,7 @@ python3 -m py_compile \
   expense-reimbursement-preflight/scripts/expense_reimbursement_preflight.py \
   feature-flag-debt-audit/scripts/feature_flag_debt_audit.py \
   flaky-ci-forensics/scripts/flaky_ci_forensics.py \
+  home-inventory-claim-preflight/scripts/home_inventory_claim_preflight.py \
   invoice-three-way-match-preflight/scripts/invoice_three_way_match_preflight.py \
   medical-bill-dispute-preflight/scripts/medical_bill_dispute_preflight.py \
   saas-license-rightsize/scripts/saas_license_rightsize.py \

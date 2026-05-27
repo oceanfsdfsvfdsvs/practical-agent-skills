@@ -1,0 +1,7 @@
+item_id,room,category,description,quantity,claimed_replacement_cost,age_years,condition,ownership_evidence,damage_evidence,replacement_source,serial_or_model,scheduled_item,recovered_value,notes
+I-001,Living room,furniture,Sectional sofa,1,1450,4,good,photo; receipt,smoke damage photo,retailer quote,,false,0,
+I-002,Bedroom,jewelry,Engagement ring,1,4800,6,good,,room loss photo,,model unknown,false,0,
+I-003,Home office,business equipment,Design laptop,1,1800,2,good,photo,water damage photo,,MBP-14,false,0,used for freelance design business
+I-004,Kitchen,kitchen goods,Forks and spoons,48,288,3,good,room walkthrough,smoke loss photo,retailer category page,,false,0,
+I-005,Garage,tools,Cordless drill set,1,380,,fair,photo,water damage photo,hardware store quote,,false,0,
+I-006,Garage,tools,Cordless drill set,1,380,,fair,photo,water damage photo,hardware store quote,,false,0,duplicate entry from first draft

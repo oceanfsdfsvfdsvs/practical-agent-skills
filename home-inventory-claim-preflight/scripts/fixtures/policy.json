@@ -1,0 +1,23 @@
+{
+  "coverage_limit": "75000.00",
+  "deductible": "1000.00",
+  "high_value_threshold": "1500.00",
+  "receipt_required_over": "500.00",
+  "quantity_review_threshold": 24,
+  "special_sublimit_categories": [
+    "jewelry",
+    "firearms",
+    "collectibles",
+    "art",
+    "cash",
+    "silverware",
+    "tools",
+    "business equipment"
+  ],
+  "business_property_terms": [
+    "business",
+    "freelance",
+    "home office",
+    "client work"
+  ]
+}

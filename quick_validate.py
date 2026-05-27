@@ -83,6 +83,26 @@ CHECKS = (
         must_contain=("CI Decision", "timeout_or_wait", "network_or_external_service", "Estimated wasted CI minutes/day"),
     ),
     Check(
+        name="home-inventory-claim-preflight fixture",
+        command=[
+            sys.executable,
+            "home-inventory-claim-preflight/scripts/home_inventory_claim_preflight.py",
+            "--inventory",
+            "home-inventory-claim-preflight/scripts/fixtures/contents_inventory.csv",
+            "--policy",
+            "home-inventory-claim-preflight/scripts/fixtures/policy.json",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Contents Claim Decision",
+            "Hold packet pending evidence repair",
+            "missing_ownership_evidence",
+            "policy_sublimit_or_scheduled_property_review",
+            "request_replacement_cost_support",
+            "business_property_sublimit_review",
+        ),
+    ),
+    Check(
         name="feature-flag-debt-audit fixture",
         command=[
             sys.executable,
