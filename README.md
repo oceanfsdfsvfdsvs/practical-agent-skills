@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, invoice matching, insurance claim inventory checks, medical bill disputes, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, invoice matching, insurance claim inventory checks, medical bill disputes, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -20,6 +20,7 @@ Each skill is designed to be:
 | [`contract-renewal-risk-preflight`](contract-renewal-risk-preflight/SKILL.md) | Procurement, finance, IT, and ops teams reviewing vendor renewals before cancellation windows pass. | Auto-renewal risk report, notice deadlines, owner actions. | Fixture script covered by `quick_validate.py`. |
 | [`customer-escalation-timeline`](customer-escalation-timeline/SKILL.md) | Support, CS, CX, and engineering escalation teams reconstructing customer handoffs before closure or executive review. | Escalation timeline, handoff packet, owner/SLA/customer-update closure gates. | Fixture script covered by `quick_validate.py`. |
 | [`csv-import-preflight`](csv-import-preflight/SKILL.md) | Ops/CS teams importing CSV/TSV data into SaaS/admin tools. | Block/review/pass import report with risky rows. | Fixture script covered by `quick_validate.py`. |
+| [`dsar-request-preflight`](dsar-request-preflight/SKILL.md) | Privacy, legal ops, support ops, and startup teams triaging privacy-rights requests before fulfillment. | DSAR readiness report with identity, agent authority, deadline, system inventory, export, deletion-exception, sensitive-data, and owner-routing blockers. | Fixture script covered by `quick_validate.py`. |
 | [`employee-offboarding-access-preflight`](employee-offboarding-access-preflight/SKILL.md) | IT, security, HR ops, MSPs, and compliance owners closing departure or role-change access reviews. | Lingering access, direct-login SaaS, session/MFA, secret, group, and device closure-gate report. | Fixture script covered by `quick_validate.py`. |
 | [`expense-reimbursement-preflight`](expense-reimbursement-preflight/SKILL.md) | Finance, ops, managers, and founders reviewing employee reimbursement reports before approval, payroll, or ERP export. | Receipt, duplicate, policy-limit, mileage, attendee, purpose, and coding exception report. | Fixture script covered by `quick_validate.py`. |
 | [`feature-flag-debt-audit`](feature-flag-debt-audit/SKILL.md) | Engineering teams cleaning stale feature flags. | Cleanup candidates, guardrails, code references, tickets. | Fixture script covered by `quick_validate.py`. |
@@ -105,6 +106,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `contract-renewal-risk-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `customer-escalation-timeline` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `csv-import-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `dsar-request-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `employee-offboarding-access-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `expense-reimbursement-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `feature-flag-debt-audit` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -130,6 +132,7 @@ python3 -m py_compile \
   contract-renewal-risk-preflight/scripts/contract_renewal_risk_preflight.py \
   customer-escalation-timeline/scripts/customer_escalation_timeline.py \
   csv-import-preflight/scripts/csv_import_preflight.py \
+  dsar-request-preflight/scripts/dsar_request_preflight.py \
   employee-offboarding-access-preflight/scripts/employee_offboarding_access_preflight.py \
   expense-reimbursement-preflight/scripts/expense_reimbursement_preflight.py \
   feature-flag-debt-audit/scripts/feature_flag_debt_audit.py \

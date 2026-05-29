@@ -1,0 +1,5 @@
+request_id,received_date,requester,jurisdiction,request_type,identity_status,authorized_agent,agent_proof,scope,match_keys,sensitive_context,notes
+DSAR-1001,2026-04-18,alex@example.com,GDPR,access,verified,false,,all,email; customer_id,health location,"Customer asks for all profile, billing, and support data."
+DSAR-1002,2026-05-10,parent@example.com,California,deletion,pending,true,,support; billing,email; phone,minor,"Authorized agent says they represent a parent, but proof is not attached. Account has a chargeback note."
+DSAR-1003,2026-05-20,jordan@example.com,UK,deletion,verified,false,,marketing,email,,Routine marketing deletion after unsubscribe.
+DSAR-1004,,sam@example.com,CPRA,access,verified,false,,data warehouse,email,,Missing intake timestamp from webform export.

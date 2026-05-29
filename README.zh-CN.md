@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、发票三方匹配、保险理赔财物清单预检查、医疗账单争议预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、发票三方匹配、保险理赔财物清单预检查、医疗账单争议预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -20,6 +20,7 @@
 | [`合同续约风险预检查`](contract-renewal-risk-preflight/SKILL.md) | 采购、财务、IT、Ops 在供应商续约前检查自动续约和通知窗口。 | 自动续约风险报告、通知截止日、owner 行动计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`客户升级时间线重建`](customer-escalation-timeline/SKILL.md) | Support、CS、CX、工程升级团队在关闭升级或高层 review 前重建客户交接上下文。 | 升级时间线、交接包、owner/SLA/客户更新 closure gate。 | 已接入 `quick_validate.py` fixture。 |
 | [`CSV 导入预检查`](csv-import-preflight/SKILL.md) | Ops/CS/内部工具团队导入 CSV/TSV 前检查风险。 | Block/review/pass 导入报告和风险行。 | 已接入 `quick_validate.py` fixture。 |
+| [`DSAR 隐私请求预检查`](dsar-request-preflight/SKILL.md) | Privacy、Legal Ops、Support Ops 和创业团队在履行隐私权请求前检查 intake 和系统清单。 | DSAR readiness 报告，标记身份验证、代理授权、截止期、系统覆盖、导出、删除例外、敏感数据和 owner 路由 blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`员工离职访问预检查`](employee-offboarding-access-preflight/SKILL.md) | IT、安全、HR Ops、MSP、合规 owner 在离职或转岗访问 review 关闭前检查残留权限。 | 残留账号、直登 SaaS、session/MFA、密钥、群组、设备的 closure-gate 报告。 | 已接入 `quick_validate.py` fixture。 |
 | [`员工报销预检查`](expense-reimbursement-preflight/SKILL.md) | 财务、Ops、经理和创始人在报销审批、工资发放或 ERP 导出前检查员工报销单。 | 收据、重复提交、政策额度、里程、参会人、用途和会计编码异常报告。 | 已接入 `quick_validate.py` fixture。 |
 | [`Feature Flag 债务审计`](feature-flag-debt-audit/SKILL.md) | 工程/平台团队清理陈旧 feature flags。 | 清理候选、保护性 guardrails、代码引用、ticket。 | 已接入 `quick_validate.py` fixture。 |
@@ -105,6 +106,7 @@ openclaw skills check <skill-name>
 | 合同续约风险预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 客户升级时间线重建 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | CSV 导入预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| DSAR 隐私请求预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 员工离职访问预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 员工报销预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | Feature Flag 债务审计 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

@@ -1,0 +1,6 @@
+system,owner,data_categories,match_keys,export_supported,deletion_supported,retention_lock,legal_hold,processor
+CRM,RevOps,profile; marketing,email; customer_id,true,true,false,false,Internal
+Billing,Finance,billing; payments,email; customer_id; phone,true,false,true,false,Stripe
+Support Desk,Support,support; tickets,email; phone,false,true,false,false,Zendesk
+Data Warehouse,Data Engineering,profile; billing; support; analytics,email; customer_id,false,false,true,true,Snowflake
+Marketing Automation,Marketing,marketing; email,email,true,true,false,false,Mailchimp

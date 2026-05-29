@@ -1,0 +1,13 @@
+{
+  "default_sla_days": 30,
+  "jurisdiction_sla_days": {
+    "gdpr": 30,
+    "uk": 30,
+    "california": 45,
+    "cpra": 45
+  },
+  "due_soon_days": 7,
+  "extension_review_days": 5,
+  "sensitive_terms": ["minor", "child", "health", "biometric", "precise location", "location", "financial"],
+  "deletion_exception_terms": ["tax", "fraud", "legal hold", "chargeback", "accounting", "security"]
+}

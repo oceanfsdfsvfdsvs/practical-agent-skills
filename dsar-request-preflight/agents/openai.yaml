@@ -1,0 +1,7 @@
+display_name: DSAR Request Preflight
+short_description: Triage privacy-rights requests for identity, deadline, system-inventory, export, deletion-exception, sensitive-data, and owner-routing blockers.
+default_prompt: |
+  Use dsar-request-preflight on the supplied DSAR/privacy request intake and system inventory.
+  Preserve privacy and authority boundaries, run the bundled local script when file paths are available,
+  classify fulfillment blockers, and produce a response-readiness report with owner routing and guardrails.
+  Do not provide legal advice, perform live exports/deletions, or send requester communications without explicit authorization.

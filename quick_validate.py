@@ -64,6 +64,33 @@ CHECKS = (
         must_contain=("ready_with_cited_answer", "do_not_answer_in_sheet"),
     ),
     Check(
+        name="dsar-request-preflight fixture",
+        command=[
+            sys.executable,
+            "dsar-request-preflight/scripts/dsar_request_preflight.py",
+            "--requests",
+            "dsar-request-preflight/scripts/fixtures/requests.csv",
+            "--systems",
+            "dsar-request-preflight/scripts/fixtures/systems.csv",
+            "--policy",
+            "dsar-request-preflight/scripts/fixtures/policy.json",
+            "--today",
+            "2026-05-30",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "DSAR Request Decision",
+            "Hold fulfillment pending repair",
+            "response_deadline_overdue",
+            "identity_verification_missing",
+            "authorized_agent_proof_missing",
+            "deletion_blocked_or_exception_needed",
+            "access_export_not_supported",
+            "sensitive_or_minor_data_context",
+            "missing_received_date",
+        ),
+    ),
+    Check(
         name="flaky-ci-forensics fixture",
         command=[
             sys.executable,
