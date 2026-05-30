@@ -1,0 +1,4 @@
+interface:
+  display_name: "Parcel Claim Preflight"
+  short_description: "Check parcel claim packets before submission"
+  default_prompt: "Use $parcel-claim-preflight to review these shipment records and evidence files before I submit carrier or shipping-insurance claims."

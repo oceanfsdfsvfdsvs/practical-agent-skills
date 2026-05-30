@@ -1,0 +1,1 @@
+Customer states the parcel was not received after the last hub scan.

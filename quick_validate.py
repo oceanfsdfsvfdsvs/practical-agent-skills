@@ -368,6 +368,28 @@ CHECKS = (
             "mileage_rate_exceeds_policy",
         ),
     ),
+    Check(
+        name="parcel-claim-preflight fixture",
+        command=[
+            sys.executable,
+            "parcel-claim-preflight/scripts/parcel_claim_preflight.py",
+            "--shipments",
+            "parcel-claim-preflight/scripts/fixtures/shipments.csv",
+            "--evidence-dir",
+            "parcel-claim-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-05-31",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Parcel Claim Decision",
+            "Hold claim pending evidence repair",
+            "damage_photos_missing",
+            "packaging_photos_missing",
+            "original_packaging_unavailable",
+            "claim_deadline_passed",
+        ),
+    ),
 )
 
 

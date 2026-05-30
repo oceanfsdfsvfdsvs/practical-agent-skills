@@ -1,0 +1,4 @@
+shipment_id,order_id,carrier,claim_type,tracking_status,item_value,declared_value,insured_value,currency,discovery_date,claim_deadline,proof_of_value,tracking_proof,damage_photos,outer_packaging_photos,inner_packaging_photos,original_packaging_available,recipient_statement,packing_slip,replacement_shipped,notes
+PKG-1001,ORD-7001,UPS,damage,Damage inspection requested,420.00,100.00,100.00,USD,2026-05-20,2026-06-03,yes,yes,no,no,no,no,,yes,yes,Customer sent one blurry product photo but discarded box.
+PKG-1002,ORD-7002,FedEx,loss,Lost after hub scan,189.99,200.00,200.00,USD,2026-05-22,2026-06-18,yes,yes,,,,,yes,,no,Trace opened and customer confirmed non-receipt.
+PKG-1003,ORD-7003,USPS,missing_contents,Delivered; buyer says box was empty,75.00,75.00,75.00,USD,2026-04-10,2026-05-15,yes,yes,,yes,no,yes,,no,no,Deadline already passed and no inner packing evidence.
