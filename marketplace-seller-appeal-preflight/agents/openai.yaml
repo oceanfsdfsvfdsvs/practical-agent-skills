@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketplace Seller Appeal Preflight"
+  short_description: "Check seller appeal packets before marketplace submission"
+  default_prompt: "Use $marketplace-seller-appeal-preflight to review these marketplace notices, draft appeal notes, and evidence files before I submit a seller-account or listing appeal."

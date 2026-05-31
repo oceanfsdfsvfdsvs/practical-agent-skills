@@ -347,6 +347,28 @@ CHECKS = (
         ),
     ),
     Check(
+        name="marketplace-seller-appeal-preflight fixture",
+        command=[
+            sys.executable,
+            "marketplace-seller-appeal-preflight/scripts/marketplace_seller_appeal_preflight.py",
+            "--cases",
+            "marketplace-seller-appeal-preflight/scripts/fixtures/appeal_cases.csv",
+            "--evidence-dir",
+            "marketplace-seller-appeal-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-01",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Seller Appeal Decision",
+            "Hold appeal pending evidence repair",
+            "missing_root_cause",
+            "missing_supply_chain_invoice",
+            "supplier_docs_do_not_match_listing",
+            "sensitive_file_redaction_required",
+        ),
+    ),
+    Check(
         name="expense-reimbursement-preflight fixture",
         command=[
             sys.executable,

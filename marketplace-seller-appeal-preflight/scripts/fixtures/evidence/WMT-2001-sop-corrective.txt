@@ -1,0 +1,1 @@
+Fixture placeholder: warehouse SOP update and daily cutoff check.
