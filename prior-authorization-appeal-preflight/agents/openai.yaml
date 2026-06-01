@@ -1,0 +1,7 @@
+display_name: Prior Authorization Appeal Preflight
+short_description: Check prior authorization denial appeal packets for deadlines, evidence gaps, step-therapy proof, criteria mapping, and owner-review blockers.
+default_prompt: |
+  Use prior-authorization-appeal-preflight on the supplied prior authorization denial, case table, and local evidence files.
+  Preserve privacy boundaries, run the bundled local script when file paths are available, classify appeal blockers,
+  and produce a packet-readiness report with evidence gaps and next steps. Do not provide medical, legal,
+  billing, insurance-coverage, or guaranteed appeal-outcome advice, and do not submit live portal actions.

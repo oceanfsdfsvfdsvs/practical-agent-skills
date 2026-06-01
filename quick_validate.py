@@ -412,6 +412,29 @@ CHECKS = (
             "claim_deadline_passed",
         ),
     ),
+    Check(
+        name="prior-authorization-appeal-preflight fixture",
+        command=[
+            sys.executable,
+            "prior-authorization-appeal-preflight/scripts/prior_authorization_appeal_preflight.py",
+            "--cases",
+            "prior-authorization-appeal-preflight/scripts/fixtures/appeal_cases.csv",
+            "--evidence-dir",
+            "prior-authorization-appeal-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-02",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Prior Authorization Appeal Decision",
+            "Hold appeal pending evidence repair",
+            "missing_step_therapy_documentation",
+            "missing_letter_of_medical_necessity",
+            "representative_authorization_missing",
+            "appeal_deadline_passed",
+            "live_portal_action_requested",
+        ),
+    ),
 )
 
 
