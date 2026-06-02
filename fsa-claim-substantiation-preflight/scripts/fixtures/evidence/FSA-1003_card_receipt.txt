@@ -1,0 +1,4 @@
+Merchant: Fit Clinic
+Amount: 300.00
+Payment method: card
+Note: this is payment proof only, not an itemized receipt or current LMN.

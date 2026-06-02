@@ -1,0 +1,7 @@
+display_name: FSA Claim Substantiation Preflight
+short_description: Find FSA/HRA/HSA claim packet documentation gaps before submission or debit-card substantiation.
+default_prompt: |
+  Use fsa-claim-substantiation-preflight on the supplied FSA, LPFSA, DCFSA, HRA, or HSA claim table and local evidence.
+  Run the bundled local script when file paths are available, classify receipt/EOB/LMN/dependent-care/deadline/duplicate
+  blockers, and produce a packet-readiness report without submitting claims, editing portals, or giving tax, legal,
+  medical, payroll, or plan-design advice.

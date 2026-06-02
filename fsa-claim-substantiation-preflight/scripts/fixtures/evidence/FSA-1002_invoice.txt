@@ -1,0 +1,5 @@
+Provider: Little Steps
+Dependent: Jamie Lee
+Service dates: April 2026 daycare
+Amount: 1200.00
+Note: provider signature, certification, and TIN were not included in this fixture.

@@ -1,0 +1,5 @@
+Provider: North Rehab
+Patient: Alex Lee
+Description: physical therapy visit package
+Amount: 450.00
+Note: service date was omitted from this redacted receipt fixture.

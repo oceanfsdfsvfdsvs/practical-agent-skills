@@ -110,6 +110,30 @@ CHECKS = (
         must_contain=("CI Decision", "timeout_or_wait", "network_or_external_service", "Estimated wasted CI minutes/day"),
     ),
     Check(
+        name="fsa-claim-substantiation-preflight fixture",
+        command=[
+            sys.executable,
+            "fsa-claim-substantiation-preflight/scripts/fsa_claim_substantiation_preflight.py",
+            "--claims",
+            "fsa-claim-substantiation-preflight/scripts/fixtures/fsa_claims.csv",
+            "--evidence-dir",
+            "fsa-claim-substantiation-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-03",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "FSA Claim Substantiation Decision",
+            "Hold claim packet pending evidence repair",
+            "missing_eob_for_insured_service",
+            "receipt_missing_required_fields",
+            "lmn_required_or_expired",
+            "dependent_care_certification_missing",
+            "claim_deadline_passed",
+            "live_portal_action_requested",
+        ),
+    ),
+    Check(
         name="home-inventory-claim-preflight fixture",
         command=[
             sys.executable,
