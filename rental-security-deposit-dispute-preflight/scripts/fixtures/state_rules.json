@@ -1,0 +1,38 @@
+{
+  "CA": {
+    "deadline_days": 21,
+    "deadline_basis": "after possession is returned",
+    "itemization_required_if_withheld": true,
+    "forwarding_address_required": false,
+    "normal_wear_tear_protected": true,
+    "deposit_cap_months": 1.0,
+    "pre_move_out_inspection_material": true
+  },
+  "NY": {
+    "deadline_days": 14,
+    "deadline_basis": "after the tenant vacates",
+    "itemization_required_if_withheld": true,
+    "forwarding_address_required": false,
+    "normal_wear_tear_protected": true,
+    "deposit_cap_months": 1.0,
+    "pre_move_out_inspection_material": false
+  },
+  "TX": {
+    "deadline_days": 30,
+    "deadline_basis": "after surrender and forwarding address",
+    "itemization_required_if_withheld": true,
+    "forwarding_address_required": true,
+    "normal_wear_tear_protected": true,
+    "deposit_cap_months": null,
+    "pre_move_out_inspection_material": false
+  },
+  "MA": {
+    "deadline_days": 30,
+    "deadline_basis": "after tenancy ends or move-out",
+    "itemization_required_if_withheld": true,
+    "forwarding_address_required": false,
+    "normal_wear_tear_protected": true,
+    "deposit_cap_months": 1.0,
+    "pre_move_out_inspection_material": false
+  }
+}

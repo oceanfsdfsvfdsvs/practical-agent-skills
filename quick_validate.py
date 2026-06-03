@@ -459,6 +459,31 @@ CHECKS = (
             "live_portal_action_requested",
         ),
     ),
+    Check(
+        name="rental-security-deposit-dispute-preflight fixture",
+        command=[
+            sys.executable,
+            "rental-security-deposit-dispute-preflight/scripts/rental_security_deposit_dispute_preflight.py",
+            "--cases",
+            "rental-security-deposit-dispute-preflight/scripts/fixtures/deposit_cases.csv",
+            "--rules",
+            "rental-security-deposit-dispute-preflight/scripts/fixtures/state_rules.json",
+            "--evidence-dir",
+            "rental-security-deposit-dispute-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-04",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Security Deposit Dispute Decision",
+            "Hold dispute packet pending evidence repair",
+            "late_itemized_statement",
+            "missing_itemized_statement",
+            "normal_wear_tear_deduction_review",
+            "missing_move_out_condition_evidence",
+            "live_action_requested",
+        ),
+    ),
 )
 
 

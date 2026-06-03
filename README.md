@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, rental security deposit disputes, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -32,6 +32,7 @@ Each skill is designed to be:
 | [`medical-bill-dispute-preflight`](medical-bill-dispute-preflight/SKILL.md) | Patients, caregivers, benefits advocates, and HR benefits teams reviewing medical bills before payment or dispute escalation. | Bill-vs-EOB exception report with hold, itemization, appeal, reconciliation, surprise-billing, and financial-assistance next steps. | Fixture script covered by `quick_validate.py`. |
 | [`parcel-claim-preflight`](parcel-claim-preflight/SKILL.md) | Ecommerce operators, support teams, consumers, and claims helpers checking parcel loss, damage, missing-contents, or late-delivery claims before submission. | Claim-readiness report with evidence blockers, packaging/deadline/value risks, and owner next steps. | Fixture script covered by `quick_validate.py`. |
 | [`prior-authorization-appeal-preflight`](prior-authorization-appeal-preflight/SKILL.md) | Patients, caregivers, benefits advocates, clinics, and HR benefits helpers reviewing prior authorization denials before appeal submission. | Appeal-readiness report with denial-reason mapping, deadline, medical-necessity, step-therapy, criteria, authorization, and live-portal blockers. | Fixture script covered by `quick_validate.py`. |
+| [`rental-security-deposit-dispute-preflight`](rental-security-deposit-dispute-preflight/SKILL.md) | Tenants, housing advocates, legal-aid intake helpers, caregivers, and property managers checking deposit return or deduction disputes before demand letters, complaints, or small claims. | Security deposit dispute readiness report with deadline, itemization, normal wear-and-tear, receipt, condition-evidence, forwarding-address, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`saas-license-rightsize`](saas-license-rightsize/SKILL.md) | IT, finance, procurement, MSP, and ops teams auditing SaaS seats before renewals or budget reviews. | Reclaim, downgrade, duplicate-account, stale-admin, and owner-review plan with savings estimate. | Fixture script covered by `quick_validate.py`. |
 | [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B teams answering security questionnaires. | Evidence-backed answer draft and escalation labels. | Fixture script covered by `quick_validate.py`. |
 | [`utm-governance-preflight`](utm-governance-preflight/SKILL.md) | Marketing ops, growth, RevOps, analytics, and agency teams reviewing campaign links before launch or reporting freeze. | UTM launch-gate report with missing parameter, alias, source/medium swap, naming drift, and sensitive-label fixes. | Fixture script covered by `quick_validate.py`. |
@@ -122,6 +123,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `medical-bill-dispute-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `parcel-claim-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `prior-authorization-appeal-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror/install notes bundled | Install notes bundled | Yes |
+| `rental-security-deposit-dispute-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `saas-license-rightsize` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `security-questionnaire-triage` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `utm-governance-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -152,6 +154,7 @@ python3 -m py_compile \
   medical-bill-dispute-preflight/scripts/medical_bill_dispute_preflight.py \
   parcel-claim-preflight/scripts/parcel_claim_preflight.py \
   prior-authorization-appeal-preflight/scripts/prior_authorization_appeal_preflight.py \
+  rental-security-deposit-dispute-preflight/scripts/rental_security_deposit_dispute_preflight.py \
   saas-license-rightsize/scripts/saas_license_rightsize.py \
   security-questionnaire-triage/scripts/security_questionnaire_triage.py \
   utm-governance-preflight/scripts/utm_governance_preflight.py \

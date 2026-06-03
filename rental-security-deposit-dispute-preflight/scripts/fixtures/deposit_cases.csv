@@ -1,0 +1,4 @@
+case_id,state,city,monthly_rent,deposit_amount,amount_withheld,move_out_date,keys_returned_date,itemized_statement_date,refund_date,forwarding_address_sent,pre_move_out_inspection_requested,move_in_condition_record,move_out_photos,lease_uploaded,deposit_receipt_uploaded,landlord_receipts_provided,deductions,tenant_damage_admitted,demand_letter_sent,live_portal_action_requested
+ca-001,CA,Los Angeles,3000,3000,2100,2026-05-01,2026-05-01,2026-05-29,,yes,no,yes,yes,yes,yes,no,"painting:1200;cleaning:350;floor repair:550",no,no,no
+tx-002,TX,Austin,1800,1800,1800,2026-05-04,2026-05-04,,,no,no,no,no,yes,yes,no,"carpet replacement:1400;cleaning:400",no,no,no
+ny-003,NY,New York,2400,2400,750,2026-05-20,2026-05-20,2026-05-31,2026-06-01,yes,no,yes,yes,yes,yes,yes,"unpaid utilities:250;broken window:500",yes,yes,yes

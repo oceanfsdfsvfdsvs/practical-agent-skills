@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rental Deposit Dispute Preflight"
+  short_description: "Check security deposit dispute packets before escalation"
+  default_prompt: "Use $rental-security-deposit-dispute-preflight to review this rental security deposit timeline, deduction statement, and evidence folder before I send a demand letter or small-claims packet."

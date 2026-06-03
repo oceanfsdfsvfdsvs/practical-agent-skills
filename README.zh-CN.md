@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、租房押金争议预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -32,6 +32,7 @@
 | [`医疗账单争议预检查`](medical-bill-dispute-preflight/SKILL.md) | 患者、照护者、福利顾问和 HR benefits 团队在付款或升级争议前检查医疗账单。 | Bill-vs-EOB 异常报告，标记暂停付款、索要明细、申诉复核、provider/insurer reconciliation、surprise-billing review 和经济援助下一步。 | 已接入 `quick_validate.py` fixture。 |
 | [`包裹理赔预检查`](parcel-claim-preflight/SKILL.md) | 电商、支持团队、消费者和理赔协助者在提交包裹丢失、损坏、缺件或延误理赔前检查材料。 | Claim-readiness 报告，标记证据 blocker、包装/截止期/申报价值风险和 owner 下一步。 | 已接入 `quick_validate.py` fixture。 |
 | [`Prior Authorization 申诉预检查`](prior-authorization-appeal-preflight/SKILL.md) | 患者、照护者、福利顾问、诊所和 HR benefits helper 在提交 prior authorization denial 申诉前检查材料。 | 申诉 readiness 报告，标记 denial reason、截止期、medical necessity、step therapy、criteria mapping、代理授权和 live portal blocker。 | 已接入 `quick_validate.py` fixture。 |
+| [`租房押金争议预检查`](rental-security-deposit-dispute-preflight/SKILL.md) | 租客、住房倡导者、legal-aid intake helper、照护者和物业方在发 demand letter、投诉或小额诉讼材料前检查押金退还/扣款争议。 | 押金争议 readiness 报告，标记截止期、itemization、normal wear-and-tear、收据、入住/退租证据、转寄地址和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`SaaS 许可证 Rightsize`](saas-license-rightsize/SKILL.md) | IT、财务、采购、MSP、Ops 在续约或预算审查前检查 SaaS 席位。 | reclaim/downgrade/重复账号/离职员工/stale admin 行动计划和节省估算。 | 已接入 `quick_validate.py` fixture。 |
 | [`安全问卷分流`](security-questionnaire-triage/SKILL.md) | B2B 团队回答安全问卷。 | 基于证据的回答草稿和升级标签。 | 已接入 `quick_validate.py` fixture。 |
 | [`UTM 治理预检查`](utm-governance-preflight/SKILL.md) | Marketing Ops、增长、RevOps、分析和代理团队在 campaign 上线或报表冻结前检查链接。 | UTM launch gate 报告，标记缺失参数、别名漂移、source/medium 互换、命名漂移和敏感公开标签。 | 已接入 `quick_validate.py` fixture。 |
@@ -122,6 +123,7 @@ openclaw skills check <skill-name>
 | 医疗账单争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 包裹理赔预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | Prior Authorization 申诉预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror/安装说明 | 已提供安装说明 | 有 |
+| 租房押金争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | SaaS 许可证 Rightsize | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 安全问卷分流 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | UTM 治理预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
