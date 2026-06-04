@@ -214,6 +214,30 @@ CHECKS = (
         ),
     ),
     Check(
+        name="credit-report-dispute-preflight fixture",
+        command=[
+            sys.executable,
+            "credit-report-dispute-preflight/scripts/credit_report_dispute_preflight.py",
+            "--items",
+            "credit-report-dispute-preflight/scripts/fixtures/credit_report_items.csv",
+            "--evidence-dir",
+            "credit-report-dispute-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-05",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Credit Report Dispute Decision",
+            "Hold dispute packet pending evidence repair",
+            "identity_theft_report_missing",
+            "highlighted_report_page_missing",
+            "payment_or_settlement_proof_missing",
+            "repeat_dispute_needs_new_evidence",
+            "reinserted_item_prior_deletion_missing",
+            "live_action_requested",
+        ),
+    ),
+    Check(
         name="customer-escalation-timeline fixture",
         command=[
             sys.executable,

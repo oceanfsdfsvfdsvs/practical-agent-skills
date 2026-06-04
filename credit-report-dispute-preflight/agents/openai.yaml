@@ -1,0 +1,4 @@
+interface:
+  display_name: "Credit Report Dispute Preflight"
+  short_description: "Check credit report dispute packets before sending"
+  default_prompt: "Use $credit-report-dispute-preflight to review these credit report items, bureau responses, and evidence files before I send a credit bureau or furnisher dispute."

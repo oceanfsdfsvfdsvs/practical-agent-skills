@@ -1,0 +1,6 @@
+item_id,bureau,furnisher,account_name,issue_type,report_date,first_seen_date,last_dispute_date,response_date,prior_result,reported_status,claimed_correction,amount,identity_theft,live_action_requested,notes
+fraud-001,Experian,Metro Bank,Metro Bank Visa,identity_theft,2026-05-20,2026-05-01,,,,open,Account opened by identity thief,2400.00,yes,no,Fraudulent account appeared before apartment application.
+paid-002,Equifax,North Collections,North Collections LLC,paid_or_settled,2026-05-18,2025-11-03,2026-03-01,2026-03-28,verified,collection open,Settled balance should report zero,680.00,no,no,Prior dispute verified but new settlement letter is not attached.
+dup-003,TransUnion,Auto Finance Co,Auto Finance Co loan,duplicate_or_mixed_file,2026-05-22,2026-04-10,,,,duplicate chargeoff,Duplicate tradeline should be removed,12000.00,no,no,Two similar tradelines appear with different account suffixes.
+reins-004,Equifax,Regional Medical Collections,Regional Medical Collections,investigation_response,2026-05-25,2026-05-25,2026-02-10,2026-03-04,deleted,collection open,Item was deleted and reappeared,390.00,no,no,Need prior deletion letter.
+portal-005,Experian,Utility Co,Utility Co account,wrong_balance_or_status,2026-05-30,2026-05-30,,,,past due,Should report current after billing correction,130.00,no,yes,User asked the agent to submit the dispute in the portal.

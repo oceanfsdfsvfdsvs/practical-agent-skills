@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, rental security deposit disputes, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, credit report disputes, rental security deposit disputes, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -18,6 +18,7 @@ Each skill is designed to be:
 | [`ap-duplicate-payment-preflight`](ap-duplicate-payment-preflight/SKILL.md) | AP teams reviewing payment runs before ACH/wire/check release. | Duplicate-payment exception report with hold/review rows. | Fixture script covered by `quick_validate.py`. |
 | [`chargeback-evidence-pack`](chargeback-evidence-pack/SKILL.md) | Merchants assembling dispute evidence packs. | Reason-coded evidence inventory and challenge recommendation. | Fixture script covered by `quick_validate.py`. |
 | [`contract-renewal-risk-preflight`](contract-renewal-risk-preflight/SKILL.md) | Procurement, finance, IT, and ops teams reviewing vendor renewals before cancellation windows pass. | Auto-renewal risk report, notice deadlines, owner actions. | Fixture script covered by `quick_validate.py`. |
+| [`credit-report-dispute-preflight`](credit-report-dispute-preflight/SKILL.md) | Consumers, caregivers, housing counselors, financial coaches, and legal-aid intake helpers checking credit report error disputes before sending. | Credit report dispute readiness report with bureau/furnisher routing, evidence gaps, identity-theft, repeat-dispute, reinserted-item, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`customer-escalation-timeline`](customer-escalation-timeline/SKILL.md) | Support, CS, CX, and engineering escalation teams reconstructing customer handoffs before closure or executive review. | Escalation timeline, handoff packet, owner/SLA/customer-update closure gates. | Fixture script covered by `quick_validate.py`. |
 | [`csv-import-preflight`](csv-import-preflight/SKILL.md) | Ops/CS teams importing CSV/TSV data into SaaS/admin tools. | Block/review/pass import report with risky rows. | Fixture script covered by `quick_validate.py`. |
 | [`dsar-request-preflight`](dsar-request-preflight/SKILL.md) | Privacy, legal ops, support ops, and startup teams triaging privacy-rights requests before fulfillment. | DSAR readiness report with identity, agent authority, deadline, system inventory, export, deletion-exception, sensitive-data, and owner-routing blockers. | Fixture script covered by `quick_validate.py`. |
@@ -109,6 +110,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `ap-duplicate-payment-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `chargeback-evidence-pack` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `contract-renewal-risk-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `credit-report-dispute-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `customer-escalation-timeline` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `csv-import-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `dsar-request-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -140,6 +142,7 @@ python3 -m py_compile \
   ap-duplicate-payment-preflight/scripts/ap_duplicate_payment_preflight.py \
   chargeback-evidence-pack/scripts/chargeback_evidence_pack.py \
   contract-renewal-risk-preflight/scripts/contract_renewal_risk_preflight.py \
+  credit-report-dispute-preflight/scripts/credit_report_dispute_preflight.py \
   customer-escalation-timeline/scripts/customer_escalation_timeline.py \
   csv-import-preflight/scripts/csv_import_preflight.py \
   dsar-request-preflight/scripts/dsar_request_preflight.py \
