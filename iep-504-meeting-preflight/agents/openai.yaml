@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEP/504 Meeting Preflight"
+  short_description: "Check IEP and 504 meeting packets before review"
+  default_prompt: "Use $iep-504-meeting-preflight to review these IEP or 504 meeting records, evidence files, and requested changes before the meeting."

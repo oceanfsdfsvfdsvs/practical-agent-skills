@@ -1,0 +1,5 @@
+case_id,student_role,meeting_type,plan_type,grade_band,primary_concern,requested_change,meeting_date,last_evaluation_date,reevaluation_due_date,prior_plan,evaluation_report,progress_report,service_log,accommodation_log,parent_concerns,school_notice,consent_status,behavior_data,discipline_notice,transition_plan,assistive_technology_review,live_action_requested
+IEP-100,parent,annual_review,IEP,elementary,reading support,increase specialized reading service,2026-06-12,2021-04-15,2024-04-15,yes,no,no,no,,yes,yes,granted,,,,,no
+IEP-200,parent,manifestation,IEP,middle,discipline and behavior,review behavior supports,2026-06-08,2024-11-02,2027-11-02,yes,yes,yes,yes,,yes,yes,granted,no,no,,,,no
+504-300,caregiver,accommodation_review,504,high,testing accommodations,update extended-time and quiet-room supports,2026-06-20,2025-10-10,,yes,yes,,,"no",yes,yes,not_applicable,,,,,yes
+IEP-400,parent,transition_review,IEP,high,postsecondary transition,update transition goals and agency questions,2026-07-02,2025-02-14,2028-02-14,yes,yes,yes,yes,yes,yes,yes,granted,,,no,no,no

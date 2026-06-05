@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -28,6 +28,7 @@
 | [`不稳定 CI 取证`](flaky-ci-forensics/SKILL.md) | 工程团队分析不稳定 CI/测试失败。 | 失败聚类、flake 置信度、成本估算、修复计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`FSA Claim Substantiation 预检查`](fsa-claim-substantiation-preflight/SKILL.md) | 员工、照护者、HR benefits 团队和福利管理员在提交、重提或 debit-card substantiation 前检查 FSA/HRA/HSA claim packet。 | Claim packet readiness 报告，标记 EOB、收据字段、LMN、dependent-care、截止期、重复报销和 live portal blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`保险理赔财物清单预检查`](home-inventory-claim-preflight/SKILL.md) | 屋主、租户、照护者和 claims helper 在提交 contents inventory 给 adjuster 前检查材料。 | 财物清单证据缺口报告，标记 ownership、damage、replacement cost、sublimit、重复行和 packet readiness 风险。 | 已接入 `quick_validate.py` fixture。 |
+| [`IEP/504 会议材料预检查`](iep-504-meeting-preflight/SKILL.md) | 家长、照护者、倡导者、学校支持人员和 school team 在 IEP/504 会议、评估或升级前检查材料。 | IEP/504 readiness 报告，标记评估、进展、服务日志、accommodation、notice、行为、transition 和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`发票三方匹配预检查`](invoice-three-way-match-preflight/SKILL.md) | AP、采购、收货、Ops 在付款前审核发票/PO/收货异常。 | 三方匹配异常报告，标记 hold/route 行和 owner 下一步。 | 已接入 `quick_validate.py` fixture。 |
 | [`Marketplace 卖家申诉预检查`](marketplace-seller-appeal-preflight/SKILL.md) | Marketplace 卖家、电商运营、账号健康团队和代理商在提交账号/Listing 申诉前检查材料。 | 卖家申诉 readiness 报告，标记证据缺口、POA blocker、供应商文件不匹配和脱敏风险。 | 已接入 `quick_validate.py` fixture。 |
 | [`医疗账单争议预检查`](medical-bill-dispute-preflight/SKILL.md) | 患者、照护者、福利顾问和 HR benefits 团队在付款或升级争议前检查医疗账单。 | Bill-vs-EOB 异常报告，标记暂停付款、索要明细、申诉复核、provider/insurer reconciliation、surprise-billing review 和经济援助下一步。 | 已接入 `quick_validate.py` fixture。 |
@@ -120,6 +121,7 @@ openclaw skills check <skill-name>
 | 不稳定 CI 取证 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | FSA Claim Substantiation 预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 保险理赔财物清单预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| IEP/504 会议材料预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 发票三方匹配预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | Marketplace 卖家申诉预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 医疗账单争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

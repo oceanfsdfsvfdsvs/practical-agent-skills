@@ -154,6 +154,30 @@ CHECKS = (
         ),
     ),
     Check(
+        name="iep-504-meeting-preflight fixture",
+        command=[
+            sys.executable,
+            "iep-504-meeting-preflight/scripts/iep_504_meeting_preflight.py",
+            "--cases",
+            "iep-504-meeting-preflight/scripts/fixtures/meeting_cases.csv",
+            "--evidence-dir",
+            "iep-504-meeting-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-06",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "IEP/504 Meeting Decision",
+            "Hold meeting packet pending evidence repair",
+            "current_evaluation_missing_or_stale",
+            "progress_report_missing",
+            "service_log_missing",
+            "behavior_or_discipline_data_missing",
+            "reevaluation_deadline_review",
+            "live_action_requested",
+        ),
+    ),
+    Check(
         name="feature-flag-debt-audit fixture",
         command=[
             sys.executable,
