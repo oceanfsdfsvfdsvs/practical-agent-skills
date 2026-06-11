@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unemployment Appeal Preflight"
+  short_description: "Check unemployment appeal and hearing packets before filing"
+  default_prompt: "Use $unemployment-appeal-preflight to review these unemployment denial, employer appeal, hearing, evidence, and deadline materials before filing or attending the hearing."

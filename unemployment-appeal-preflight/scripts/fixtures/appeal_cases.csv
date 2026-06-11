@@ -1,0 +1,5 @@
+case_id,party_role,state,appeal_stage,issue_type,determination_date,appeal_deadline,hearing_date,determination_notice,hearing_notice,hearing_packet,claimant_statement,employer_evidence,separation_timeline,policy_or_handbook,warning_or_writeup,firsthand_witness,witness_contact,work_search_or_weekly_certification,medical_or_caregiver_evidence,good_cause_explanation,evidence_exchanged_to_all_parties,language_access_or_accommodation,live_action_requested
+UI-001,claimant,GA,filing,late_appeal,2026-05-20,2026-06-05,,yes,,,,,,,,,,,,,,,
+UI-002,claimant,CO,hearing,misconduct,2026-05-25,2026-06-14,2026-06-17,yes,yes,no,yes,no,yes,no,no,no,,yes,,,no,,
+UI-003,claimant,NY,employer_appeal,able_available,2026-05-18,2026-06-18,2026-06-20,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,,yes,yes,
+UI-004,claimant,CA,filing,overpayment,2026-06-01,2026-06-25,,yes,,,,,,,,,,no,,,,,yes

@@ -1,0 +1,11 @@
+# OpenClaw Notes
+
+Install by copying the full `unemployment-appeal-preflight` directory into your OpenClaw workspace skills directory so `SKILL.md`, `references/`, `templates/`, `examples/`, and `scripts/` stay together.
+
+Suggested check when your local OpenClaw CLI supports skill validation:
+
+```bash
+openclaw skills check unemployment-appeal-preflight
+```
+
+This environment did not provide a verified OpenClaw CLI during packaging, so runtime execution is not claimed here. The skill uses only Markdown instructions and a local Python script with relative paths.

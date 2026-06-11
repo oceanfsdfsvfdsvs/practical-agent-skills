@@ -532,6 +532,30 @@ CHECKS = (
             "live_action_requested",
         ),
     ),
+    Check(
+        name="unemployment-appeal-preflight fixture",
+        command=[
+            sys.executable,
+            "unemployment-appeal-preflight/scripts/unemployment_appeal_preflight.py",
+            "--cases",
+            "unemployment-appeal-preflight/scripts/fixtures/appeal_cases.csv",
+            "--evidence-dir",
+            "unemployment-appeal-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-12",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Unemployment Appeal Decision",
+            "Hold appeal packet pending evidence repair",
+            "appeal_deadline_passed",
+            "hearing_packet_missing",
+            "misconduct_evidence_missing_or_unsupported",
+            "evidence_not_exchanged_to_all_parties",
+            "weekly_certification_or_work_search_missing",
+            "live_action_requested",
+        ),
+    ),
 )
 
 
