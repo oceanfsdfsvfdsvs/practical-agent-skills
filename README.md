@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, credit report disputes, rental security deposit disputes, unemployment appeal packet checks, IEP/504 meeting packet checks, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, credit report disputes, rental security deposit disputes, unemployment appeal packet checks, workers' compensation denial checks, IEP/504 meeting packet checks, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -40,6 +40,7 @@ Each skill is designed to be:
 | [`unemployment-appeal-preflight`](unemployment-appeal-preflight/SKILL.md) | Claimants, employers, workforce navigators, legal-aid intake helpers, and benefits advocates checking unemployment denial, employer appeal, hearing, overpayment, misconduct, quit, able-and-available, or work-search packets before filing or hearing. | Unemployment appeal readiness report with deadline, hearing-packet, evidence-exchange, issue-evidence, witness, weekly-certification, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`utm-governance-preflight`](utm-governance-preflight/SKILL.md) | Marketing ops, growth, RevOps, analytics, and agency teams reviewing campaign links before launch or reporting freeze. | UTM launch-gate report with missing parameter, alias, source/medium swap, naming drift, and sensitive-label fixes. | Fixture script covered by `quick_validate.py`. |
 | [`vendor-bank-change-preflight`](vendor-bank-change-preflight/SKILL.md) | Finance, AP, accounting, and procurement teams reviewing supplier bank-detail changes before payment. | Payment-redirection risk report with hold/verify/release actions. | Fixture script covered by `quick_validate.py`. |
+| [`workers-comp-denial-preflight`](workers-comp-denial-preflight/SKILL.md) | Injured workers, caregivers, HR partners, union stewards, legal-aid intake helpers, and claims advocates checking denied or disputed workers' comp packets before owner review. | Workers' comp denial readiness report with deadline, denial-letter, medical-causation, employer-dispute, work-restriction, billing-crossover, evidence-exchange, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`workslop-review`](workslop-review/SKILL.md) | Managers and ICs reviewing vague AI-assisted work output. | Rubric-based critique and accountable rewrite. | Prompt/workflow skill; no script required. |
 
 ## Standalone Repositories
@@ -134,6 +135,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `unemployment-appeal-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `utm-governance-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `vendor-bank-change-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `workers-comp-denial-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `workslop-review` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | No, prompt workflow |
 
 ## Repository Validation
@@ -168,6 +170,7 @@ python3 -m py_compile \
   unemployment-appeal-preflight/scripts/unemployment_appeal_preflight.py \
   utm-governance-preflight/scripts/utm_governance_preflight.py \
   vendor-bank-change-preflight/scripts/vendor_bank_change_preflight.py \
+  workers-comp-denial-preflight/scripts/workers_comp_denial_preflight.py \
   quick_validate.py
 ```
 

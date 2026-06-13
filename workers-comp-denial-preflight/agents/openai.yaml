@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workers' Comp Denial Preflight"
+  short_description: "Check workers' comp denial packets before review"
+  default_prompt: "Use $workers-comp-denial-preflight to review this workers' compensation denial, appeal packet, medical records, incident report, work restrictions, bills, and evidence folder before I contact an authorized reviewer."

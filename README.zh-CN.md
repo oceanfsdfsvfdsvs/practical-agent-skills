@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、失业保险申诉材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、失业保险申诉材料预检查、workers' compensation 拒赔材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -40,6 +40,7 @@
 | [`失业保险申诉预检查`](unemployment-appeal-preflight/SKILL.md) | 申请人、雇主、workforce navigator、legal-aid intake helper 和福利协助者在提交失业保险拒绝、雇主 appeal、听证、overpayment、misconduct、quit、able-and-available 或 work-search 材料前检查。 | Unemployment appeal readiness 报告，标记截止期、听证包、证据交换、issue-evidence、证人、weekly certification 和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`UTM 治理预检查`](utm-governance-preflight/SKILL.md) | Marketing Ops、增长、RevOps、分析和代理团队在 campaign 上线或报表冻结前检查链接。 | UTM launch gate 报告，标记缺失参数、别名漂移、source/medium 互换、命名漂移和敏感公开标签。 | 已接入 `quick_validate.py` fixture。 |
 | [`供应商银行信息变更预检查`](vendor-bank-change-preflight/SKILL.md) | 财务、AP、会计、采购在付款前审核供应商银行信息变更。 | 付款重定向风险报告，标记 hold/verify/release 行。 | 已接入 `quick_validate.py` fixture。 |
+| [`Workers' Comp 拒赔预检查`](workers-comp-denial-preflight/SKILL.md) | 受伤员工、照护者、HR partner、工会代表、legal-aid intake helper 和 claims advocate 在 owner review 前检查 workers' compensation 拒赔或争议材料。 | Workers' comp denial readiness 报告，标记截止期、denial letter、medical causation、employer dispute、work restriction、billing crossover、evidence exchange 和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`Workslop 审查`](workslop-review/SKILL.md) | 管理者和 IC 审查含糊的 AI 辅助工作产出。 | Rubric 审查和更清晰的改写版本。 | Prompt/workflow skill，无脚本依赖。 |
 
 ## 独立仓库
@@ -134,6 +135,7 @@ openclaw skills check <skill-name>
 | 失业保险申诉预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | UTM 治理预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 供应商银行信息变更预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| Workers' Comp 拒赔预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | Workslop 审查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 无，prompt workflow |
 
 ## 验证

@@ -556,6 +556,32 @@ CHECKS = (
             "live_action_requested",
         ),
     ),
+    Check(
+        name="workers-comp-denial-preflight fixture",
+        command=[
+            sys.executable,
+            "workers-comp-denial-preflight/scripts/workers_comp_denial_preflight.py",
+            "--cases",
+            "workers-comp-denial-preflight/scripts/fixtures/workers_comp_cases.csv",
+            "--evidence-dir",
+            "workers-comp-denial-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-14",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Workers' Comp Denial Decision",
+            "Hold packet pending evidence repair",
+            "appeal_deadline_passed",
+            "denial_letter_missing",
+            "medical_causation_evidence_missing",
+            "incident_report_missing",
+            "work_restrictions_missing",
+            "billing_crossover_review",
+            "evidence_not_exchanged_to_all_parties",
+            "live_action_requested",
+        ),
+    ),
 )
 
 
