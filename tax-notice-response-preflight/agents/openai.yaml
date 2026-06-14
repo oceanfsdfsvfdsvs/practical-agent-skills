@@ -1,0 +1,7 @@
+display_name: Tax Notice Response Preflight
+short_description: Check IRS or state tax notice response packets for deadline, authenticity, evidence, routing, and professional-review blockers.
+default_prompt: |
+  Use tax-notice-response-preflight on the supplied IRS or state tax notice summary and evidence inventory.
+  Preserve privacy boundaries, run the bundled local script when file paths are available, classify response blockers,
+  and produce a tax notice response preflight report with packet checklist and owner next steps. Do not provide tax,
+  legal, accounting, investment, identity-theft recovery, or representation advice.

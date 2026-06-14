@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、失业保险申诉材料预检查、workers' compensation 拒赔材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、税务通知响应预检查、失业保险申诉材料预检查、workers' compensation 拒赔材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -37,6 +37,7 @@
 | [`租房押金争议预检查`](rental-security-deposit-dispute-preflight/SKILL.md) | 租客、住房倡导者、legal-aid intake helper、照护者和物业方在发 demand letter、投诉或小额诉讼材料前检查押金退还/扣款争议。 | 押金争议 readiness 报告，标记截止期、itemization、normal wear-and-tear、收据、入住/退租证据、转寄地址和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`SaaS 许可证 Rightsize`](saas-license-rightsize/SKILL.md) | IT、财务、采购、MSP、Ops 在续约或预算审查前检查 SaaS 席位。 | reclaim/downgrade/重复账号/离职员工/stale admin 行动计划和节省估算。 | 已接入 `quick_validate.py` fixture。 |
 | [`安全问卷分流`](security-questionnaire-triage/SKILL.md) | B2B 团队回答安全问卷。 | 基于证据的回答草稿和升级标签。 | 已接入 `quick_validate.py` fixture。 |
+| [`税务通知响应预检查`](tax-notice-response-preflight/SKILL.md) | 纳税人、照护者、报税从业者、bookkeeper、clinic 和小企业运营在回复、付款、上传文件、申请更多时间或升级 IRS/州税务通知前检查材料。 | Tax notice response readiness 报告，标记截止期、真伪校验、证据、专业复核、送达证明和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`失业保险申诉预检查`](unemployment-appeal-preflight/SKILL.md) | 申请人、雇主、workforce navigator、legal-aid intake helper 和福利协助者在提交失业保险拒绝、雇主 appeal、听证、overpayment、misconduct、quit、able-and-available 或 work-search 材料前检查。 | Unemployment appeal readiness 报告，标记截止期、听证包、证据交换、issue-evidence、证人、weekly certification 和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`UTM 治理预检查`](utm-governance-preflight/SKILL.md) | Marketing Ops、增长、RevOps、分析和代理团队在 campaign 上线或报表冻结前检查链接。 | UTM launch gate 报告，标记缺失参数、别名漂移、source/medium 互换、命名漂移和敏感公开标签。 | 已接入 `quick_validate.py` fixture。 |
 | [`供应商银行信息变更预检查`](vendor-bank-change-preflight/SKILL.md) | 财务、AP、会计、采购在付款前审核供应商银行信息变更。 | 付款重定向风险报告，标记 hold/verify/release 行。 | 已接入 `quick_validate.py` fixture。 |
@@ -132,6 +133,7 @@ openclaw skills check <skill-name>
 | 租房押金争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | SaaS 许可证 Rightsize | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 安全问卷分流 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 税务通知响应预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 失业保险申诉预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | UTM 治理预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 供应商银行信息变更预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

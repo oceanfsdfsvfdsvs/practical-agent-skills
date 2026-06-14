@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, credit report disputes, rental security deposit disputes, unemployment appeal packet checks, workers' compensation denial checks, IEP/504 meeting packet checks, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
+Local-first agent skills for real work where a plain prompt is too inconsistent: finance controls, reimbursement preflights, FSA claim substantiation checks, invoice matching, credit report disputes, rental security deposit disputes, tax notice response checks, unemployment appeal packet checks, workers' compensation denial checks, IEP/504 meeting packet checks, insurance claim inventory checks, parcel claim preflights, marketplace seller appeals, medical bill disputes, prior authorization appeals, privacy-rights request preflights, customer escalations, access offboarding, contract renewals, SaaS license rightsizing, security questionnaires, CI forensics, import checks, feature-flag cleanup, UTM governance, and AI work review.
 
 Each skill is designed to be:
 
@@ -37,6 +37,7 @@ Each skill is designed to be:
 | [`rental-security-deposit-dispute-preflight`](rental-security-deposit-dispute-preflight/SKILL.md) | Tenants, housing advocates, legal-aid intake helpers, caregivers, and property managers checking deposit return or deduction disputes before demand letters, complaints, or small claims. | Security deposit dispute readiness report with deadline, itemization, normal wear-and-tear, receipt, condition-evidence, forwarding-address, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`saas-license-rightsize`](saas-license-rightsize/SKILL.md) | IT, finance, procurement, MSP, and ops teams auditing SaaS seats before renewals or budget reviews. | Reclaim, downgrade, duplicate-account, stale-admin, and owner-review plan with savings estimate. | Fixture script covered by `quick_validate.py`. |
 | [`security-questionnaire-triage`](security-questionnaire-triage/SKILL.md) | B2B teams answering security questionnaires. | Evidence-backed answer draft and escalation labels. | Fixture script covered by `quick_validate.py`. |
+| [`tax-notice-response-preflight`](tax-notice-response-preflight/SKILL.md) | Taxpayers, caregivers, preparers, bookkeepers, clinics, and small-business operators checking IRS or state notices before replying, paying, uploading documents, requesting more time, or escalating. | Tax notice response readiness report with deadline, authenticity, evidence, professional-review, delivery-proof, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`unemployment-appeal-preflight`](unemployment-appeal-preflight/SKILL.md) | Claimants, employers, workforce navigators, legal-aid intake helpers, and benefits advocates checking unemployment denial, employer appeal, hearing, overpayment, misconduct, quit, able-and-available, or work-search packets before filing or hearing. | Unemployment appeal readiness report with deadline, hearing-packet, evidence-exchange, issue-evidence, witness, weekly-certification, and live-action blockers. | Fixture script covered by `quick_validate.py`. |
 | [`utm-governance-preflight`](utm-governance-preflight/SKILL.md) | Marketing ops, growth, RevOps, analytics, and agency teams reviewing campaign links before launch or reporting freeze. | UTM launch-gate report with missing parameter, alias, source/medium swap, naming drift, and sensitive-label fixes. | Fixture script covered by `quick_validate.py`. |
 | [`vendor-bank-change-preflight`](vendor-bank-change-preflight/SKILL.md) | Finance, AP, accounting, and procurement teams reviewing supplier bank-detail changes before payment. | Payment-redirection risk report with hold/verify/release actions. | Fixture script covered by `quick_validate.py`. |
@@ -132,6 +133,7 @@ If your OpenClaw version requires a registry URL or ClawHub package, use this re
 | `rental-security-deposit-dispute-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `saas-license-rightsize` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `security-questionnaire-triage` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
+| `tax-notice-response-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `unemployment-appeal-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `utm-governance-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
 | `vendor-bank-change-preflight` | `SKILL.md`, `agents/openai.yaml` | Mirror bundled | Install notes bundled | Yes |
@@ -167,6 +169,7 @@ python3 -m py_compile \
   rental-security-deposit-dispute-preflight/scripts/rental_security_deposit_dispute_preflight.py \
   saas-license-rightsize/scripts/saas_license_rightsize.py \
   security-questionnaire-triage/scripts/security_questionnaire_triage.py \
+  tax-notice-response-preflight/scripts/tax_notice_response_preflight.py \
   unemployment-appeal-preflight/scripts/unemployment_appeal_preflight.py \
   utm-governance-preflight/scripts/utm_governance_preflight.py \
   vendor-bank-change-preflight/scripts/vendor_bank_change_preflight.py \

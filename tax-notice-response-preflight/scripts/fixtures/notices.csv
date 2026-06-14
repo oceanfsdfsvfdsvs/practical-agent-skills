@@ -1,0 +1,5 @@
+notice_id,agency,notice_type,tax_year,notice_date,response_due_date,amount,issue,taxpayer_agrees,response_form_included,requested_action,delivery_channel,notes
+N-1001,IRS,CP2000,2024,2026-05-21,2026-06-20,18450.00,underreported brokerage income and missing cost basis,no,no,reply with signed response and documents,upload fax mail,Taxpayer says basis is missing and needs 8949 support
+N-1002,IRS,CP53E,2025,2026-05-23,2026-06-22,3400.00,direct deposit update requested,unsure,,update bank info in online account,online account,User did not expect a refund and letter has QR code
+N-1003,IRS,CP14,2024,2026-06-01,2026-07-01,2200.00,balance due but taxpayer says payment cleared,no,yes,call or reply with supporting records,phone mail,Payment was made by direct pay but no proof attached
+N-1004,IRS,CP3219A,2023,2026-03-16,2026-06-14,8900.00,notice of deficiency after prior CP2000 response,no,yes,petition or respond promptly,mail fax,Taxpayer mailed prior response but has no delivery proof

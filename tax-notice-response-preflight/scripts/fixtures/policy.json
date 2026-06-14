@@ -1,0 +1,16 @@
+{
+  "urgent_days": 10,
+  "professional_review_amount": "5000.00",
+  "high_risk_notice_terms": [
+    "cp3219a",
+    "notice of deficiency",
+    "tax court",
+    "levy",
+    "lien",
+    "summons",
+    "passport",
+    "criminal",
+    "identity theft",
+    "fraud"
+  ]
+}

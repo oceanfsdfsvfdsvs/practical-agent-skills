@@ -557,6 +557,31 @@ CHECKS = (
         ),
     ),
     Check(
+        name="tax-notice-response-preflight fixture",
+        command=[
+            sys.executable,
+            "tax-notice-response-preflight/scripts/tax_notice_response_preflight.py",
+            "--notices",
+            "tax-notice-response-preflight/scripts/fixtures/notices.csv",
+            "--evidence",
+            "tax-notice-response-preflight/scripts/fixtures/evidence.csv",
+            "--policy",
+            "tax-notice-response-preflight/scripts/fixtures/policy.json",
+            "--today",
+            "2026-06-15",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Tax Notice Response Decision",
+            "Hold response pending evidence repair",
+            "cp2000_supporting_documents_missing",
+            "cp53e_authenticity_or_account_status_review",
+            "payment_proof_missing",
+            "deadline_passed_or_imminent",
+            "professional_review_recommended",
+        ),
+    ),
+    Check(
         name="workers-comp-denial-preflight fixture",
         command=[
             sys.executable,
