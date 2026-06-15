@@ -110,6 +110,31 @@ CHECKS = (
         must_contain=("CI Decision", "timeout_or_wait", "network_or_external_service", "Estimated wasted CI minutes/day"),
     ),
     Check(
+        name="fmla-certification-preflight fixture",
+        command=[
+            sys.executable,
+            "fmla-certification-preflight/scripts/fmla_certification_preflight.py",
+            "--cases",
+            "fmla-certification-preflight/scripts/fixtures/fmla_cases.csv",
+            "--evidence-dir",
+            "fmla-certification-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-16",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "FMLA Certification Decision",
+            "Hold certification packet pending repair",
+            "certification_deadline_passed",
+            "provider_signature_missing",
+            "serious_health_condition_field_missing",
+            "intermittent_frequency_missing",
+            "cure_deadline_passed",
+            "eligibility_notice_missing",
+            "live_action_requested",
+        ),
+    ),
+    Check(
         name="fsa-claim-substantiation-preflight fixture",
         command=[
             sys.executable,

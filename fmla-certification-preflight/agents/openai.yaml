@@ -1,0 +1,4 @@
+interface:
+  display_name: "FMLA Certification Preflight"
+  short_description: "Check FMLA certification packets before submission or cure"
+  default_prompt: "Use $fmla-certification-preflight to review this FMLA certification, eligibility notice, cure notice, deadline email, and evidence folder before I submit, cure, designate, or escalate the packet."
