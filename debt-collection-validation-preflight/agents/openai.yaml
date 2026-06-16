@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debt Collection Validation Preflight"
+  short_description: "Check collector validation and dispute packets before responding"
+  default_prompt: "Use $debt-collection-validation-preflight to review these collection letters, validation notices, timelines, and evidence files before I respond to a debt collector."

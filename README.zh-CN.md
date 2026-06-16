@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FMLA certification 检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、租房押金争议预检查、税务通知响应预检查、失业保险申诉材料预检查、workers' compensation 拒赔材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
+这是一个本地优先的 agent skills 集合，面向真实工作流中“普通 prompt 不够稳定”的实用问题：财务控制、员工报销预检查、FMLA certification 检查、FSA/HRA/HSA claim substantiation 检查、发票三方匹配、信用报告争议预检查、债务催收验证预检查、租房押金争议预检查、税务通知响应预检查、失业保险申诉材料预检查、workers' compensation 拒赔材料预检查、IEP/504 会议材料预检查、保险理赔财物清单预检查、包裹理赔预检查、Marketplace 卖家申诉预检查、医疗账单争议预检查、prior authorization 申诉预检查、隐私权请求预检查、客户升级交接、离职访问撤销、供应商银行信息变更、合同续约、SaaS 许可证 rightsizing、安全问卷、CI 故障取证、CSV 导入检查、Feature Flag 清理、UTM 治理，以及 AI 工作产出审查。
 
 每个 skill 的目标是：
 
@@ -19,6 +19,7 @@
 | [`拒付证据包整理`](chargeback-evidence-pack/SKILL.md) | 商家、电商、支付运营处理拒付/争议。 | 按 reason code 组织的证据清单与挑战建议。 | 已接入 `quick_validate.py` fixture。 |
 | [`合同续约风险预检查`](contract-renewal-risk-preflight/SKILL.md) | 采购、财务、IT、Ops 在供应商续约前检查自动续约和通知窗口。 | 自动续约风险报告、通知截止日、owner 行动计划。 | 已接入 `quick_validate.py` fixture。 |
 | [`信用报告争议预检查`](credit-report-dispute-preflight/SKILL.md) | 消费者、照护者、住房顾问、financial coach 和 legal-aid intake helper 在发送征信争议前检查材料。 | 信用报告争议 readiness 报告，标记 bureau/furnisher 路由、证据缺口、身份盗窃、重复争议、重新出现条目和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
+| [`债务催收验证预检查`](debt-collection-validation-preflight/SKILL.md) | 消费者、照护者、financial counselor、legal-aid intake helper 和 benefits advocate 在回复催收方前检查 collection letter。 | 催收验证 readiness 报告，标记 validation notice、30 天窗口、collector identity、证据缺口、dispute 后继续催收、old debt 和 live-action blocker。 | 已接入 `quick_validate.py` fixture。 |
 | [`客户升级时间线重建`](customer-escalation-timeline/SKILL.md) | Support、CS、CX、工程升级团队在关闭升级或高层 review 前重建客户交接上下文。 | 升级时间线、交接包、owner/SLA/客户更新 closure gate。 | 已接入 `quick_validate.py` fixture。 |
 | [`CSV 导入预检查`](csv-import-preflight/SKILL.md) | Ops/CS/内部工具团队导入 CSV/TSV 前检查风险。 | Block/review/pass 导入报告和风险行。 | 已接入 `quick_validate.py` fixture。 |
 | [`DSAR 隐私请求预检查`](dsar-request-preflight/SKILL.md) | Privacy、Legal Ops、Support Ops 和创业团队在履行隐私权请求前检查 intake 和系统清单。 | DSAR readiness 报告，标记身份验证、代理授权、截止期、系统覆盖、导出、删除例外、敏感数据和 owner 路由 blocker。 | 已接入 `quick_validate.py` fixture。 |
@@ -116,6 +117,7 @@ openclaw skills check <skill-name>
 | 拒付证据包整理 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 合同续约风险预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 信用报告争议预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
+| 债务催收验证预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | 客户升级时间线重建 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | CSV 导入预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |
 | DSAR 隐私请求预检查 | `SKILL.md`, `agents/openai.yaml` | 已提供 mirror | 已提供安装说明 | 有 |

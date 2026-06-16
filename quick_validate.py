@@ -287,6 +287,29 @@ CHECKS = (
         ),
     ),
     Check(
+        name="debt-collection-validation-preflight fixture",
+        command=[
+            sys.executable,
+            "debt-collection-validation-preflight/scripts/debt_collection_validation_preflight.py",
+            "--cases",
+            "debt-collection-validation-preflight/scripts/fixtures/debt_collection_cases.csv",
+            "--evidence-dir",
+            "debt-collection-validation-preflight/scripts/fixtures/evidence",
+            "--today",
+            "2026-06-17",
+        ],
+        expected_returncodes={2},
+        must_contain=(
+            "Debt Collection Validation Decision",
+            "Hold validation packet pending evidence repair",
+            "validation_notice_missing",
+            "timely_dispute_window_at_risk",
+            "collection_after_timely_dispute_without_verification",
+            "collector_identity_or_address_missing",
+            "live_action_requested",
+        ),
+    ),
+    Check(
         name="customer-escalation-timeline fixture",
         command=[
             sys.executable,

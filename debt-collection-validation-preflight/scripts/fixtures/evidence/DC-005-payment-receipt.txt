@@ -1,0 +1,1 @@
+Sample fixture: payment receipt tying DC-005 to Regional Utility account acct-2330.
